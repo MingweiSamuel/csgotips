@@ -22,15 +22,12 @@
     body {
       font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #000;
+    }
+    
+    p, h1, h2, h3, h4, h5, h6, span {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       filter: invert(100%);
-    }
-    
-    .noinvert {
-      -webkit-filter: invert(0%);
-      -moz-filter: invert(0%);
-      filter: invert(0%);
     }
     
     .section {
@@ -61,7 +58,7 @@
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="nine columns noinvert">
+        <div class="nine columns">
           <svg id="map" viewBox="0 0 1024 1024"></svg>
           <script type="text/javascript">
             var map = maps.cache;
