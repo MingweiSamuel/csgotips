@@ -55,6 +55,8 @@
             var s = Snap("#map");
             s.image(map.img, 0, 0, 1024, 1024);
 
+            var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
+
             for (var i = 0; i < map.smokes.length; i++) {
               var smoke = map.smokes[i];
 
@@ -67,8 +69,9 @@
 
               polyline.addClass("arrow").attr({
                 stroke: "#fff",
-                strokeWidth: 5,
-                fillOpacity: 0
+                strokeWidth: 6,
+                fillOpacity: 0,
+                filter: shadow
               });
             }
           </script>
