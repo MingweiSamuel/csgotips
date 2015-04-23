@@ -60,32 +60,6 @@
       <div class="row">
         <div class="nine columns">
           <svg id="map" viewBox="0 0 1024 1024"></svg>
-          <script type="text/javascript">
-            var map = maps.cache;
-
-            var s = Snap("#map");
-            s.image(map.img, 0, 0, 1024, 1024);
-
-            var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
-
-            for (var i = 0; i < map.smokes.length; i++) {
-              var smoke = map.smokes[i];
-
-              var polyline = s.polyline(smoke.loc.map(function(n, i) {
-                if (i % 2 === 0)
-                  return (n - map.pos_x) / map.scale;
-                else
-                  return (map.pos_y - n) / map.scale;
-              }));
-
-              polyline.addClass("arrow").attr({
-                stroke: "#fff",
-                strokeWidth: 6,
-                fillOpacity: 0,
-                filter: shadow
-              });
-            }
-          </script>
         </div>
         <div class="three columns">
           <h4>Throws:</h4>
@@ -93,5 +67,55 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    (function() {
+      var xmlhttp;
+      if (window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      else // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XmlHttpRequest.DONE ) {
+          if(xmlhttp.status == 200){
+            load(JSON.parse(xmlhttp.responseText));
+          }
+          else {
+             alert('Error ' + xmlhttp.status)
+          }
+        }
+      }
+  
+      xmlhttp.open("GET", "./nades.json", true);
+      xmlhttp.send();
+    })();
+    
+    function load(maps) {
+      var map = maps.cache;
+    
+      var s = Snap("#map");
+      s.image(map.img, 0, 0, 1024, 1024);
+    
+      var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
+    
+      for (var i = 0; i < map.smokes.length; i++) {
+        var smoke = map.smokes[i];
+    
+        var polyline = s.polyline(smoke.loc.map(function(n, i) {
+          if (i % 2 === 0)
+            return (n - map.pos_x) / map.scale;
+          else
+            return (map.pos_y - n) / map.scale;
+        }));
+    
+        polyline.addClass("arrow").attr({
+          stroke: "#fff",
+          strokeWidth: 6,
+          fillOpacity: 0,
+          filter: shadow
+        });
+      }
+    }
+  </script>
 </body>
 </html>
