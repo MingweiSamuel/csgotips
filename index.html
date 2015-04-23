@@ -82,7 +82,7 @@
             load(JSON.parse(xmlhttp.responseText));
           }
           else {
-             alert('Error ' + xmlhttp.status)
+             alert('Error ' + xmlhttp.status);
           }
         }
       };
@@ -98,16 +98,18 @@
       s.image(map.img, 0, 0, 1024, 1024);
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
+      
+      var updateLoc = function(n, i) {
+        if (i % 2 === 0)
+          return (n - map.pos_x) / map.scale;
+        else
+          return (map.pos_y - n) / map.scale;
+      };
     
       for (var i = 0; i < map.smokes.length; i++) {
         var smoke = map.smokes[i];
     
-        var polyline = s.polyline(smoke.loc.map(function(n, i) {
-          if (i % 2 === 0)
-            return (n - map.pos_x) / map.scale;
-          else
-            return (map.pos_y - n) / map.scale;
-        }));
+        var polyline = s.polyline(smoke.loc.map(updateLoc));
     
         polyline.addClass("arrow").attr({
           stroke: "#fff",
