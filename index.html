@@ -26,6 +26,8 @@
     p, h1, h2, h3, h4, h5, h6, span, select {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
+      -ms-filter: invert(100%);
+      -o-filter: invert(100%);
       filter: invert(100%);
     }
     
@@ -41,10 +43,11 @@
     }
     
     #map {
-      -webkit-transition: opacity .5s ease 0;
-      -moz-transition: opacity .5s ease 0;
-      -o-transition: opacity .5s ease 0;
-      transition: opacity .5s ease 0;
+      -webkit-transition: opacity 1s ease 0;
+      -moz-transition: opacity 1s ease 0;
+      -ms-transition: opacity 1s ease 0;
+      -o-transition: opacity 1s ease 0;
+      transition: opacity 1s ease 0;
       opacity: 1;
     }
     #map.hide {
@@ -72,7 +75,9 @@
     <div class="container">
       <div class="row">
         <div class="nine columns">
-          <svg id="map"></svg>
+          <svg id="map" class="hide">
+            <!-- SVG -->
+          </svg>
         </div>
         <div class="three columns">
           <div class="row">
@@ -92,7 +97,7 @@
   
     var s = Snap("#map");
     var maps = {};
-    var delay = 500;
+    var delay = 1000;
     
     (function() {
       var xmlhttp;
