@@ -23,7 +23,7 @@
       background-color: #000;
     }
     
-    p, h1, h2, h3, h4, h5, h6, span, .invert {
+    p, h1, h2, h3, h4, h5, h6, span, select {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       filter: invert(100%);
@@ -57,7 +57,7 @@
       </div>
       <div class="row">
         <div class="twelve column">
-          <select class="invert" id="mapSelect" onchange="changeMap(this.value);">
+          <select class="u-full-width" id="mapSelect" onchange="changeMap(this.value);">
             <!-- MAPS SELECT GOES HERE -->
           </select>
         </div>
@@ -94,6 +94,7 @@
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
           if(xmlhttp.status == 200){
             maps = JSON.parse(xmlhttp.responseText);
+            updateMaps();
             update();
           }
           else {
