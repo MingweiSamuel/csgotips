@@ -128,16 +128,19 @@
         group.addClass("arrow").attr({
           fill: dark,
           stroke: dark,
+          opacity: 0.6,
           filter: shadow
         }).hover(function() {
           this.animate({
             fill: light,
-            stroke: light
+            stroke: light,
+            opacity: 0.9
           }, 100, mina.linear);
         }, function() {
           this.animate({
             fill: dark,
-            stroke: dark
+            stroke: dark,
+            opacity: 0.6
           }, 100, mina.linear);
         }, group, group);
       }
