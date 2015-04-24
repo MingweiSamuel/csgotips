@@ -136,7 +136,7 @@
       if (first)
         update();
       else {
-        document.getElementById("map").style.cssText = "opacity:0;";
+        document.getElementById("map").style.opacity = 0;
         setTimeout(update, delay);
       }
     }
@@ -205,7 +205,7 @@
         }.bind(smoke.gfy));
       }
       
-      document.getElementById("map").style.cssText = "opacity:1;";
+      document.getElementById("map").style.opacity = 1;
       
       return true;
     }
