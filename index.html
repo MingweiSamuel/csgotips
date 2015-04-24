@@ -106,6 +106,9 @@
         else
           return (map.pos_y - n) / map.scale;
       };
+      
+      var dark = "#999";
+      var light = "#fff";
     
       for (var i = 0; i < map.smokes.length; i++) {
         var smoke = map.smokes[i];
@@ -115,33 +118,28 @@
         
         
         var polyline = s.polyline(loc).attr({
-          //stroke: "#fff",
           strokeWidth: 5,
           fillOpacity: 0,
         });
-        var start = s.circle(loc[0], loc[1], 8).attr({
-          //fill: "#fff"
-        });
-        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 24).attr({
-          //fill: "#fff"
-        });
+        var start = s.circle(loc[0], loc[1], 8);
+        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 24);
         
         var group = s.group(start, polyline, end);
         group.addClass("arrow").attr({
-          fill: "#aaa",
-          stroke: "#aaa",
+          fill: dark,
+          stroke: dark,
           filter: shadow
         }).hover(function() {
-          group.animate({
-            fill: "#fff",
-            stroke: "#fff"
+          this.animate({
+            fill: light,
+            stroke: light
           }, 100, mina.linear);
         }, function() {
-          group.animate({
-            fill: "#aaa",
-            stroke: "#aaa"
+          this.animate({
+            fill: dark,
+            stroke: dark
           }, 100, mina.linear);
-        });
+        }, group, group);
       }
     }
   </script>
