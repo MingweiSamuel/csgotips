@@ -13,7 +13,8 @@
                     976,
                     -330,
                     16
-                ]
+                ],
+                "gfy": "ExaltedNimbleCuttlefish"
             },
             {
                 "loc":[
@@ -21,15 +22,17 @@
                     318,
                     300,
                     158
-                ]
+                ],
+                "gfy": "DefenselessDeafeningHorseshoebat"
             },
             {
                 "loc":[
                     1760,
                     202,
                     300,
-                    370
-                ]
+                    373
+                ],
+                "gfy": "PolishedHollowHorsemouse"
             },
             {
                 "loc":[
@@ -39,7 +42,8 @@
                     -1175,
                     212,
                     -636
-                ]
+                ],
+                "gfy": "AliveCircularCuckoo"
             }
         ],
         "fires":[
