@@ -102,8 +102,11 @@
     
     function update() {
       var mapName = location.hash.substring(1);
-      if (!maps.hasOwnProperty(mapName))
+      console.log("Updating map to: " + mapName)
+      if (!maps.hasOwnProperty(mapName)) {
         alert("Invalid map: " + mapName);
+        return false;
+      }
       var map = maps[mapName];
       
       s.clear(); //clear the svg
@@ -157,6 +160,8 @@
           showVideo(this);
         }.bind(smoke.gfy));
       }
+      
+      return true;
     }
   </script>
 </body>
