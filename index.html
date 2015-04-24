@@ -105,7 +105,7 @@
       var dark = "#999";
       var light = "#fff";
       var locMapper = function(n, i) {
-        return i % 2 == 0 ? n : map.pos_y + map.scale * 1000 - n;
+        return i % 2 == 0 ? n : map.scale * 1000 - map.pos_y - n;
       };
     
       for (var i = 0; i < map.smokes.length; i++) {
