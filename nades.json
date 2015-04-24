@@ -160,7 +160,7 @@
     },
     "overpass":{
         "name":"Overpass",
-        "img":"http://i.imgur.com/XvWAOY7.png",
+        "img":"http://i.imgur.com/V3oCYth.png",
         "pos_x":-4831, 
         "pos_y":1781, 
         "rot":0, 
@@ -194,7 +194,7 @@
     },
     "train":{
         "name":"Train",
-        "img":"http://i.imgur.com/FmI4GwJ.png",
+        "img":"http://i.imgur.com/J2uAZL4.png",
         "pos_x":-2477, 
         "pos_y":2392, 
         "rot":0, 
