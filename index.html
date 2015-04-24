@@ -112,21 +112,23 @@
         if (smoke.loc.length < 2)
           continue;
         var loc = smoke.loc.map(updateLoc);
-    
+        
+        
         var polyline = s.polyline(loc).attr({
-          stroke: "#fff",
+          //stroke: "#fff",
           strokeWidth: 6,
           fillOpacity: 0,
         });
         var start = s.circle(loc[0], loc[1], 10).attr({
-          fill: "#fff"
+          //fill: "#fff"
         });
-        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 25).attr({
-          fill: "#fff"
+        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 24).attr({
+          //fill: "#fff"
         });
         
         var group = s.group(start, polyline, end);
         group.addClass("arrow").attr({
+          fill: "#bbb",
           filter: shadow
         });
       }
