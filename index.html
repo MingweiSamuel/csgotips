@@ -91,6 +91,10 @@
       xmlhttp.send();
     })();
     
+    function showVideo(gfy) {
+      location.href = 'http://gfycat.com/' + gfy;
+    }
+    
     function load(maps) {
       var map = maps.cache;
       
@@ -140,7 +144,9 @@
             stroke: dark,
             opacity: 0.7
           }, 100, mina.linear);
-        }, group, group);
+        }, group, group).click(function() {
+          showVideo(this);
+        }.bind(smoke.gfy));
       }
     }
   </script>
