@@ -94,17 +94,17 @@
     function load(maps) {
       var map = maps.cache;
       
-      document.getElementById("map").setAttribute('viewBox', [map.pos_x, map.pos_y, map.scale * 1000, map.scale * 1000].join(' '));
+      document.getElementById("map").setAttribute('viewBox', [0, 0, map.scale * 1000, map.scale * 1000].join(' '));
     
       window.s = Snap("#map");
-      s.image(map.img, map.pos_x, map.pos_y, map.scale * 1000, map.scale * 1000);
+      s.image(map.img, 0, 0, map.scale * 1000, map.scale * 1000);
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
       var dark = "#999";
       var light = "#fff";
       var locMapper = function(n, i) {
-        return i % 2 == 0 ? n : map.pos_y + map.scale * 1000 - n;
+        return i % 2 == 0 ? map.pos_x + n : map.pos_y - n;
       };
     
       for (var i = 0; i < map.smokes.length; i++) {
