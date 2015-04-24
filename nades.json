@@ -69,5 +69,22 @@
         "flashes":[
 
         ]
+    },
+    "dust2":{
+        "name":"Dust II",
+        "img":"http://i.imgur.com/wJ3TNB4.png",
+        "pos_x":-2400, 
+        "pos_y":3383, 
+        "rot":1, 
+        "scale":4.4,
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
     }
 }
