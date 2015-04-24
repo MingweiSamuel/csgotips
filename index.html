@@ -168,7 +168,7 @@
     
       
       var image = s.image(map.img, 0, 0, scale, scale);
-      image.onload = function() {
+      image.node.onload = function() {
         document.getElementById("container").classList.remove('hide');
       };
     
