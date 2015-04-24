@@ -69,6 +69,7 @@
   <script type="text/javascript">
   
     var s = Snap("#map");
+    var maps = {};
     
     (function() {
       var xmlhttp;
@@ -82,7 +83,8 @@
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
           if(xmlhttp.status == 200){
-            load(JSON.parse(xmlhttp.responseText));
+            maps = JSON.parse(xmlhttp.responseText);
+            update();
           }
           else {
              alert('Error ' + xmlhttp.status);
@@ -98,7 +100,7 @@
       location.href = 'http://gfycat.com/' + gfy;
     }
     
-    function load(maps) {
+    function update() {
       var mapName = location.hash.substring(1);
       if (!maps.hasOwnProperty(mapName))
         alert("Invalid map: " + mapName);
