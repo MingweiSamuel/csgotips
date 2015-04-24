@@ -39,13 +39,20 @@
       -o-transition: all 100ms ease 0;
       transition: all 100ms ease 0;*/
     }
+    
+    #map {
+      -webkit-transition: opacity 150ms ease 0;
+      -moz-transition: opacity 150ms ease 0;
+      -o-transition: opacity 150ms ease 0;
+      transition: opacity 150ms ease 0;
+    }
   </style>
   
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js" type="text/javascript"></script>
   <script type="text/javascript">
     if (location.href.indexOf('index.html') >= 0)
       location.replace(location.href.replace('index.html', '')); //remove 'index.html', no history entry
   </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js" type="text/javascript"></script>
 </head>
 <body>
   <div class="section">
@@ -61,7 +68,7 @@
     <div class="container">
       <div class="row">
         <div class="nine columns">
-          <svg id="map"></svg>
+          <svg id="map" style="opacity:0;"></svg>
         </div>
         <div class="three columns">
           <div class="row">
@@ -81,6 +88,7 @@
   
     var s = Snap("#map");
     var maps = {};
+    var delay = 150;
     
     (function() {
       var xmlhttp;
@@ -123,8 +131,14 @@
     }
     
     function changeMap(name) {
+      var first = !location.hash.substring(1);
       location.hash = name;
-      update();
+      if (first)
+        update();
+      else {
+        document.getElementById("map").style.cssText = "opacity:0;";
+        setTimeout(update, delay);
+      }
     }
     
     function update() {
@@ -190,6 +204,8 @@
           showVideo(this);
         }.bind(smoke.gfy));
       }
+      
+      document.getElementById("map").style.cssText = "opacity:1;";
       
       return true;
     }
