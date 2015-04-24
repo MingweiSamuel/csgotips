@@ -34,10 +34,15 @@
     }
 
     .arrow {
-      -webkit-transition: fill 5000ms ease 0;
-      -moz-transition: fill 5000ms ease 0;
-      -o-transition: fill 5000ms ease 0;
-      transition: fill 5000ms ease 0;
+      -webkit-transition: fill 100ms ease 0;
+      -moz-transition: fill 100ms ease 0;
+      -o-transition: fill 100ms ease 0;
+      transition: fill 100ms ease 0;
+      
+      -webkit-transition: stroke 100ms ease 0;
+      -moz-transition: stroke 100ms ease 0;
+      -o-transition: stroke 100ms ease 0;
+      transition: stroke 100ms ease 0;
     }
   </style>
   
@@ -166,28 +171,27 @@
         var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
         var group = s.group(start, polyline, end);
+        group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
         group.addClass("arrow").attr({
           fill: dark,
           stroke: dark,
           opacity: 0.7,
           filter: shadow
         }).hover(function() {
-          this.animate({
+          this.attr({
             fill: light,
             stroke: light,
             opacity: 1.0
-          }, 100, mina.linear);
+          });
         }, function() {
-          this.animate({
+          this.attr({
             fill: dark,
             stroke: dark,
             opacity: 0.7
-          }, 100, mina.linear);
+          });
         }, group, group).click(function() {
           showVideo(this);
         }.bind(smoke.gfy));
-        
-        group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
       }
       
       return true;
