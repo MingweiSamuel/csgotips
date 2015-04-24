@@ -23,7 +23,7 @@
       background-color: #000;
     }
     
-    p, h1, h2, h3, h4, h5, h6, span {
+    p, h1, h2, h3, h4, h5, h6, span, .invert {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       filter: invert(100%);
@@ -53,6 +53,13 @@
       <div class="row">
         <div class="twelve column">
           <h1>CS:GO Nades</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <select class="invert" id="mapSelect" onchange="changeMap(this.value);">
+            <!-- MAPS SELECT GOES HERE -->
+          </select>
         </div>
       </div>
     </div>
@@ -103,11 +110,27 @@
       location.href = 'http://gfycat.com/' + gfy; //does add history entry
     }
     
+    function updateMaps() {
+      var mapIds = Object.keys(maps);
+      for (var i = 0; i < mapIds.length; i++) {
+        var opt = document.createElement('option')
+        opt.setAttribute('value', mapIds[i]);
+        opt.innerHTML = maps[mapIds[i]].name;
+        document.getElementById('mapSelect').appendChild(opt);
+      }
+    }
+    
+    function changeMap(name) {
+      location.hash = name;
+      update();
+    }
+    
     function update() {
       var mapName = location.hash.substring(1);
       console.log("Updating map to: " + mapName)
       if (!maps.hasOwnProperty(mapName)) {
-        alert("Invalid map: " + mapName);
+        if (mapName)
+          alert("Invalid map: " + mapName);
         return false;
       }
       var map = maps[mapName];
