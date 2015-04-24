@@ -34,10 +34,10 @@
     }
 
     .arrow {
-      -webkit-transition: all 100ms ease 0;
+      /*-webkit-transition: all 100ms ease 0;
       -moz-transition: all 100ms ease 0;
       -o-transition: all 100ms ease 0;
-      transition: all 100ms ease 0;
+      transition: all 100ms ease 0;*/
     }
   </style>
   
@@ -135,6 +135,7 @@
           alert("Invalid map: " + mapName);
         return false;
       }
+      document.getElementById('mapSelect').value = mapName;
       var map = maps[mapName];
       
       s.clear(); //clear the svg
