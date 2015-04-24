@@ -67,6 +67,9 @@
     </div>
   </div>
   <script type="text/javascript">
+  
+    var s = Snap("#map");
+    
     (function() {
       var xmlhttp;
       if (window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -96,12 +99,15 @@
     }
     
     function load(maps) {
-      var map = maps.cache;
+      if (!maps.hasOwnPropery(location.hash))
+        return;
+      var map = maps[location.hash];
       
+      s.clear(); //clear the svg
       var scale = map.scale * 1024;
-      document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' '));
+      document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
     
-      window.s = Snap("#map");
+      
       s.image(map.img, 0, 0, scale, scale);
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
