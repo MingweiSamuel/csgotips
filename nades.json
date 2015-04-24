@@ -8,6 +8,9 @@
         "scale":5.5,
         "smokes":[
             {
+                "from":"Van",
+                "to":"CT Mid",
+                "team":"T",
                 "loc":[
                     1730,
                     976,
@@ -17,6 +20,9 @@
                 "gfy": "ExaltedNimbleCuttlefish"
             },
             {
+                "from":"Garage",
+                "to":"Left Mid",
+                "team":"T",
                 "loc":[
                     1760,
                     318,
@@ -26,6 +32,9 @@
                 "gfy": "DefenselessDeafeningHorseshoebat"
             },
             {
+                "from":"Garage",
+                "to":"Right Mid",
+                "team":"T",
                 "loc":[
                     1760,
                     202,
@@ -35,6 +44,9 @@
                 "gfy": "PolishedHollowHorsemouse"
             },
             {
+                "from":"B Halls",
+                "to":"B Main",
+                "team":"T",
                 "loc":[
                     1100,
                     -718,
