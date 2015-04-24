@@ -167,7 +167,10 @@
       document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
     
       
-      s.image(map.img, 0, 0, scale, scale);
+      var image = s.image(map.img, 0, 0, scale, scale);
+      image.onload = function() {
+        document.getElementById("container").classList.remove('hide');
+      };
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
@@ -214,8 +217,6 @@
           showVideo(this);
         }.bind(smoke.gfy));
       }
-      
-      document.getElementById("container").classList.remove('hide');
       
       return true;
     }
