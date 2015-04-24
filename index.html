@@ -99,9 +99,10 @@
     }
     
     function load(maps) {
-      if (!maps.hasOwnProperty(location.hash))
-        return;
-      var map = maps[location.hash];
+      var mapName = location.hash.substring(1);
+      if (!maps.hasOwnProperty(mapName))
+        alert("Invalid map: " + mapName);
+      var map = maps[mapName];
       
       s.clear(); //clear the svg
       var scale = map.scale * 1024;
