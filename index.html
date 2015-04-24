@@ -159,6 +159,8 @@
         }, group, group).click(function() {
           showVideo(this);
         }.bind(smoke.gfy));
+        
+        group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
       }
       
       return true;
