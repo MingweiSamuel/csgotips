@@ -11,6 +11,8 @@
                 "from":"Van",
                 "to":"CT Mid",
                 "team":"T",
+                "speed": "still",
+                "jump": true,
                 "loc":[
                     1730,
                     976,
@@ -23,6 +25,8 @@
                 "from":"Garage",
                 "to":"Left Mid",
                 "team":"T",
+                "speed": "still",
+                "jump": false,
                 "loc":[
                     1760,
                     318,
@@ -35,6 +39,8 @@
                 "from":"Garage",
                 "to":"Right Mid",
                 "team":"T",
+                "speed": "still",
+                "jump": false,
                 "loc":[
                     1760,
                     202,
@@ -47,6 +53,8 @@
                 "from":"B Halls",
                 "to":"B Main",
                 "team":"T",
+                "speed": "sprint",
+                "jump": false,
                 "loc":[
                     1100,
                     -718,
