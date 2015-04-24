@@ -116,10 +116,10 @@
         
         var polyline = s.polyline(loc).attr({
           //stroke: "#fff",
-          strokeWidth: 6,
+          strokeWidth: 5,
           fillOpacity: 0,
         });
-        var start = s.circle(loc[0], loc[1], 10).attr({
+        var start = s.circle(loc[0], loc[1], 8).attr({
           //fill: "#fff"
         });
         var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 24).attr({
@@ -135,12 +135,12 @@
           group.animate({
             fill: "#fff",
             stroke: "#fff"
-          }, 500, mina.easeinout);
+          }, 100, mina.linear);
         }, function() {
           group.animate({
             fill: "#aaa",
             stroke: "#aaa"
-          }, 500, mina.easeinout);
+          }, 100, mina.linear);
         });
       }
     }
