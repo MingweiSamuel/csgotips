@@ -198,30 +198,36 @@
         
         var group = s.group(start, polyline, end);
         group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
-        group.addClass("arrow").attr({
-          fill: dark,
-          stroke: dark,
-          opacity: 0.7,
-          filter: shadow
-        }).hover(function() {
+        
+        var enter = function() {
           this.attr({
             fill: light,
             stroke: light,
             opacity: 1.0
           });
-        }, function() {
+        }.bind(group);
+        var leave = function() {
           this.attr({
             fill: dark,
             stroke: dark,
             opacity: 0.7
-          });
-        }, group, group).click(function() {
+          }
+        }.bind(group);
+        
+        group.addClass("arrow").attr({
+          fill: dark,
+          stroke: dark,
+          opacity: 0.7,
+          filter: shadow
+        }).hover(enter, leave).click(function() {
           showVideo(this);
         }.bind(smoke.gfy));
         
         //add list item
         var li = document.createElement('li')
         li.innerHTML = smoke.from + ' to ' + smoke.to + ' (' + smoke.team + ')';
+        li.addEventListener("mouseenter", enter);
+        li.addEventListener("mouseleave", leave);
         document.getElementById('nadeList').appendChild(li);
       }
       
