@@ -86,5 +86,107 @@
         "flashes":[
 
         ]
+    },
+    "inferno":{
+        "name":"Inferno",
+        "img":"http://i.imgur.com/qhkUs44.png",
+        "pos_x":-2200, 
+        "pos_y":4400, 
+        "rot":0, 
+        "scale":5.9
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
+    },
+    "mirage":{
+        "name":"Mirage",
+        "img":"http://i.imgur.com/qRfz1fE.png",
+        "pos_x":-3230, 
+        "pos_y":1713, 
+        "rot":0, 
+        "scale":5.0
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
+    },
+    "nuke":{
+        "name":"Nuke",
+        "img":"http://i.imgur.com/LLvNuQq.png",
+        "pos_x":-3050, 
+        "pos_y":2200, 
+        "rot":0, 
+        "scale":6.5
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
+    },
+    "overpass":{
+        "name":"Overpass",
+        "img":"http://i.imgur.com/XvWAOY7.png",
+        "pos_x":-4831, 
+        "pos_y":1781, 
+        "rot":0, 
+        "scale":5.2
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
+    },
+    "season":{
+        "name":"Season",
+        "img":"http://i.imgur.com/9xuYKbe.png",
+        "pos_x":-1003, 
+        "pos_y":2521, 
+        "rot":0, 
+        "scale":5.0
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
+    },
+    "train":{
+        "name":"Train",
+        "img":"http://i.imgur.com/FmI4GwJ.png",
+        "pos_x":-2477, 
+        "pos_y":2392, 
+        "rot":0, 
+        "scale":4.7
+        "smokes":[
+
+        ],
+        "fires":[
+
+        ],
+        "flashes":[
+
+        ]
     }
 }
