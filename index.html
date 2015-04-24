@@ -89,6 +89,9 @@
           </div>
           <div class="row">
             <h4>Throws:</h4>
+            <ul id="nadeList">
+              <!-- NADE LIST HERE -->
+            </ul>
           </div>
         </div>
       </div>
@@ -186,7 +189,6 @@
           continue;
         var loc = smoke.loc.map(locMapper);
         
-        
         var polyline = s.polyline(loc).attr({
           strokeWidth: 32,
           fillOpacity: 0,
@@ -216,6 +218,11 @@
         }, group, group).click(function() {
           showVideo(this);
         }.bind(smoke.gfy));
+        
+        //add list item
+        var li = document.createElement('li')
+        li.innerHTML = smoke.from + ' to ' + smoke.to + '(' + smoke.team + ')';
+        document.getElementById('nadeList').appendChild(li);
       }
       
       return true;
