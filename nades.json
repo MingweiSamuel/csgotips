@@ -93,7 +93,7 @@
         "pos_x":-2200, 
         "pos_y":4400, 
         "rot":0, 
-        "scale":5.9
+        "scale":5.9,
         "smokes":[
 
         ],
@@ -110,7 +110,7 @@
         "pos_x":-3230, 
         "pos_y":1713, 
         "rot":0, 
-        "scale":5.0
+        "scale":5.0,
         "smokes":[
 
         ],
@@ -127,7 +127,7 @@
         "pos_x":-3050, 
         "pos_y":2200, 
         "rot":0, 
-        "scale":6.5
+        "scale":6.5,
         "smokes":[
 
         ],
@@ -144,7 +144,7 @@
         "pos_x":-4831, 
         "pos_y":1781, 
         "rot":0, 
-        "scale":5.2
+        "scale":5.2,
         "smokes":[
 
         ],
@@ -161,7 +161,7 @@
         "pos_x":-1003, 
         "pos_y":2521, 
         "rot":0, 
-        "scale":5.0
+        "scale":5.0,
         "smokes":[
 
         ],
@@ -178,7 +178,7 @@
         "pos_x":-2477, 
         "pos_y":2392, 
         "rot":0, 
-        "scale":4.7
+        "scale":4.7,
         "smokes":[
 
         ],
