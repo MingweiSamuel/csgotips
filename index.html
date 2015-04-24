@@ -128,9 +128,19 @@
         
         var group = s.group(start, polyline, end);
         group.addClass("arrow").attr({
-          fill: "#bbb",
-          stroke: "#bbb",
+          fill: "#aaa",
+          stroke: "#aaa",
           filter: shadow
+        }).hover(function() {
+          group.animate({
+            fill: "#fff",
+            stroke: "#fff"
+          }, 500, mina.easeinout);
+        }, function() {
+          group.animate({
+            fill: "#aaa",
+            stroke: "#aaa"
+          }, 500, mina.easeinout);
         });
       }
     }
