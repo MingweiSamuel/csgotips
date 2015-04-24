@@ -94,10 +94,11 @@
     function load(maps) {
       var map = maps.cache;
       
-      document.getElementById("map").setAttribute('viewBox', [0, 0, map.scale * 1000, map.scale * 1000].join(' '));
+      var scale = map.scale * 1024;
+      document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' '));
     
       window.s = Snap("#map");
-      s.image(map.img, 0, 0, map.scale * 1000, map.scale * 1000);
+      s.image(map.img, 0, 0, scale, scale);
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
