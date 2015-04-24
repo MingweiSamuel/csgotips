@@ -59,7 +59,7 @@
     <div class="container">
       <div class="row">
         <div class="nine columns">
-          <svg id="map" viewBox="0 0 1024 1024"></svg>
+          <svg id="map"></svg>
         </div>
         <div class="three columns">
           <h4>Throws:</h4>
@@ -94,18 +94,13 @@
     
     function load(maps) {
       var map = maps.cache;
+      
+      document.getElementById("map").setAttribute('viewBox', [map.pos_x, map.pos_y, map.pos_x + map.scale * 1000, map.pos_y + map.scale * 1000].join(' '));
     
       window.s = Snap("#map");
-      s.image(map.img, 0, 0, 1024, 1024);
+      s.image(map.img, map.pos_x, map.pos_y, map.scale * 1000, map.scale * 1000);
     
-      var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
-      
-      var updateLoc = function(n, i) {
-        if (i % 2 === 0)
-          return (n - map.pos_x) / map.scale;
-        else
-          return (map.pos_y - n) / map.scale;
-      };
+      var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
       var dark = "#999";
       var light = "#fff";
@@ -114,15 +109,14 @@
         var smoke = map.smokes[i];
         if (smoke.loc.length < 2)
           continue;
-        var loc = smoke.loc.map(updateLoc);
         
         
-        var polyline = s.polyline(loc).attr({
-          strokeWidth: 7,
+        var polyline = s.polyline(smoke.loc).attr({
+          strokeWidth: 32,
           fillOpacity: 0,
         });
-        var start = s.circle(loc[0], loc[1], 8);
-        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 24);
+        var start = s.circle(smoke.loc[0], smoke.loc[1], 40);
+        var end = s.circle(smoke.loc[smoke.loc.length - 2], smoke.loc[smoke.loc.length - 1], 110);
         
         var group = s.group(start, polyline, end);
         group.addClass("arrow").attr({
