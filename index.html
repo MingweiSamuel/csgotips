@@ -95,7 +95,7 @@
     function load(maps) {
       var map = maps.cache;
     
-      var s = Snap("#map");
+      window.s = Snap("#map");
       s.image(map.img, 0, 0, 1024, 1024);
     
       var shadow = s.filter(Snap.filter.shadow(0, 0, 4, "#000", 1));
@@ -121,7 +121,7 @@
         var start = s.circle(loc[0], loc[1], 10).attr({
           fill: "#fff"
         });
-        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 32).attr({
+        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 25).attr({
           fill: "#fff"
         });
         
