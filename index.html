@@ -74,7 +74,7 @@
         xmlhttp = new XMLHttpRequest();
       else { // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        alert('please stop using IE');
+        alert('Please stop using Internet Explorer 5/6 you fakkin joke');
       }
   
       xmlhttp.onreadystatechange = function() {
@@ -109,13 +109,24 @@
     
       for (var i = 0; i < map.smokes.length; i++) {
         var smoke = map.smokes[i];
+        if (smoke.loc.length < 2)
+          continue;
+        var loc = smoke.loc.map(updateLoc);
     
-        var polyline = s.polyline(smoke.loc.map(updateLoc));
-    
-        polyline.addClass("arrow").attr({
+        var polyline = s.polyline(loc).attr({
           stroke: "#fff",
           strokeWidth: 6,
           fillOpacity: 0,
+        });
+        var start = s.circle(loc[0], loc[1], 10).attr({
+          fill: "#fff"
+        });
+        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 32).attr({
+          fill: "#fff"
+        });
+        
+        var group = s.group(start, polyline, end);
+        group.addClass("arrow").attr({
           filter: shadow
         });
       }
