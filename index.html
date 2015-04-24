@@ -45,6 +45,10 @@
       -moz-transition: opacity 150ms ease 0;
       -o-transition: opacity 150ms ease 0;
       transition: opacity 150ms ease 0;
+      opacity: 1;
+    }
+    #map.hide {
+      opacity: 0;
     }
   </style>
   
@@ -136,7 +140,7 @@
       if (first)
         update();
       else {
-        document.getElementById("map").style.opacity = 0;
+        document.getElementById("map").className = 'hide';
         setTimeout(update, delay);
       }
     }
@@ -205,7 +209,7 @@
         }.bind(smoke.gfy));
       }
       
-      document.getElementById("map").style.opacity = 1;
+      document.getElementById("map").className = '';
       
       return true;
     }
