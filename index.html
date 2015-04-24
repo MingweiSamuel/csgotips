@@ -104,15 +104,15 @@
       
       var dark = "#999";
       var light = "#fff";
-      var scale = function(n) {
-        return n * map.scale;
+      var locMapper = function(n, i) {
+        return i % 2 == 0 ? n : map.scale * 1000 - n;
       };
     
       for (var i = 0; i < map.smokes.length; i++) {
         var smoke = map.smokes[i];
         if (smoke.loc.length < 2)
           continue;
-        var loc = smoke.loc.map(scale);
+        var loc = smoke.loc.map(locMapper);
         
         
         var polyline = s.polyline(loc).attr({
