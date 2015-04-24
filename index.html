@@ -55,13 +55,6 @@
           <h1>CS:GO Nades</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="six column">
-          <select class="u-full-width" id="mapSelect" onchange="changeMap(this.value);">
-            <!-- MAPS SELECT GOES HERE -->
-          </select>
-        </div>
-      </div>
     </div>
   </div>
   <div class="section">
@@ -71,7 +64,14 @@
           <svg id="map"></svg>
         </div>
         <div class="three columns">
-          <h4>Throws:</h4>
+          <div class="row">
+            <h4>Throws:</h4>
+          </div>
+          <div class="row">
+            <select class="u-full-width" id="mapSelect" onchange="changeMap(this.value);">
+              <!-- MAPS SELECT GOES HERE -->
+            </select>
+          </div>
         </div>
       </div>
     </div>
