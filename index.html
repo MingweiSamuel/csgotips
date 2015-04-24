@@ -104,19 +104,23 @@
       
       var dark = "#999";
       var light = "#fff";
+      var scale = function(n) {
+        return n * map.scale;
+      };
     
       for (var i = 0; i < map.smokes.length; i++) {
         var smoke = map.smokes[i];
         if (smoke.loc.length < 2)
           continue;
+        var loc = smoke.loc.map(scale);
         
         
-        var polyline = s.polyline(smoke.loc).attr({
+        var polyline = s.polyline(loc).attr({
           strokeWidth: 32,
           fillOpacity: 0,
         });
-        var start = s.circle(smoke.loc[0], smoke.loc[1], 40);
-        var end = s.circle(smoke.loc[smoke.loc.length - 2], smoke.loc[smoke.loc.length - 1], 110);
+        var start = s.circle(loc[0], loc[1], 40);
+        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
         var group = s.group(start, polyline, end);
         group.addClass("arrow").attr({
