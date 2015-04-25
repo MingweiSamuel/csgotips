@@ -12,7 +12,7 @@
                 "to":"CT Mid",
                 "team":"T",
                 "speed": "still",
-                "jump": true,
+                "height": "jump",
                 "loc":[
                     1730,
                     976,
@@ -28,7 +28,7 @@
                 "to":"Left Mid",
                 "team":"T",
                 "speed": "still",
-                "jump": false,
+                "height": "stand",
                 "loc":[
                     1760,
                     318,
@@ -44,7 +44,7 @@
                 "to":"Right Mid",
                 "team":"T",
                 "speed": "still",
-                "jump": false,
+                "height": "stand",
                 "loc":[
                     1760,
                     202,
@@ -60,7 +60,7 @@
                 "to":"B Main",
                 "team":"T",
                 "speed": "sprint",
-                "jump": false,
+                "height": "stand",
                 "loc":[
                     1100,
                     -718,
@@ -208,7 +208,22 @@
         "rot":0, 
         "scale":4.7,
         "smokes":[
-
+            {
+                "from":"T Spawn",
+                "to":"Heaven",
+                "team":"T",
+                "speed": "still",
+                "height": "jump",
+                "loc":[
+                    -538,
+                    1397
+                    730,
+                    -345
+                ],
+                "webm":"http:\/\/fat.gfycat.com\/GlisteningBlondCrab.webm",
+                "mp4":"http:\/\/giant.gfycat.com\/GlisteningBlondCrab.mp4",
+                "gif":"http:\/\/zippy.gfycat.com\/GlisteningBlondCrab.gif"
+            }
         ],
         "fires":[
 
