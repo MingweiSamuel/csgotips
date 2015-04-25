@@ -83,16 +83,16 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js" type="text/javascript"></script>
 </head>
 <body>
-  <div id="pop" class="hide">
+  <div id="pop" class="hide" onclick="hideVideo();">
     <div id="grey"></div>
     <div id="gfyDiv" class="section">
       <div class="container">
         <div class="row">
           <div class="nine columns">
-            <video id="gfy" autoplay loop muted="muted" poster="//thumbs.gfycat.com/EnergeticExemplaryIlladopsis-poster.jpg" width="100%">
-              <source src="//zippy.gfycat.com/EnergeticExemplaryIlladopsis.webm" type="video/webm">
-              <source src="//zippy.gfycat.com/EnergeticExemplaryIlladopsis.mp4" type="video/mp4">
-              <a href="http://giant.gfycat.com/EnergeticExemplaryIlladopsis.gif">http://giant.gfycat.com/EnergeticExemplaryIlladopsis.gif</a>
+            <video id="gfy" autoplay loop muted="muted" poster="http://thumbs.gfycat.com/WindingInfantileIndianglassfish-poster.jpg" width="100%">
+              <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
+              <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
+              <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>
             </video>
           </div>
           <div class="three columns">
@@ -141,6 +141,7 @@
     var s = Snap("#map");
     var maps = {};
     var delay = 500;
+    var oldGfy = "WindingInfantileIndianglassfish";
     
     (function() {
       var xmlhttp;
@@ -169,7 +170,14 @@
     })();
     
     function showVideo(gfy) {
-      location.href = 'http://gfycat.com/' + gfy; //does add history entry
+      var p = document.getElementById('gfy').parentElement;
+      p.innerHTML = p.innerHTML.split(oldGfy).join(gfy);
+      document.getElementById('pop').classList.remove('hide');
+      //location.href = 'http://gfycat.com/' + gfy; //does add history entry
+    }
+    
+    function hideVideo() {
+      document.getElementById('pop').classList.add('hide');
     }
     
     function updateMaps() {
