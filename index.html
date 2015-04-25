@@ -88,10 +88,8 @@
     <div id="gfyDiv" class="section">
       <div class="container">
         <div class="row">
-          <div class="nine columns">
-            <video id="gfy" autoplay loop muted="muted" width="100%">
-              <!-- SOURCES AND GIF LINK HERE -->
-            </video>
+          <div id="gfyParent" class="nine columns">
+            <!-- VIDEO HERE -->
           </div>
           <div class="three columns">
             <p>Info about the gfy</p>
@@ -170,8 +168,12 @@
       /*<source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
       <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
       <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
-      var vid = document.getElementById('gfy');
-      vid.innerHTML = '';
+      /*<video id="gfy" autoplay loop muted="muted" width="100%"></video>*/
+      var vid = document.createElement('video');
+      vid.setAttribute('autoplay', 'true');
+      vid.setAttribute('loop', 'true');
+      vid.setAttribute('muted', 'muted');
+      vid.setAttribute('width', '100%');
       if (nade.hasOwnProperty('webm')) {
         var src = document.createElement('source');
         src.setAttribute('src', nade.webm);
@@ -190,6 +192,7 @@
         anc.innerHTML = 'GIF Link';
         vid.appendChild(anc);
       }
+      document.getElementById('gfyParent').appendChild(vid);
       document.getElementById('pop').classList.remove('hide');
       
       //location.href = 'http://gfycat.com/' + gfy; //does add history entry
@@ -197,7 +200,7 @@
     
     function hideVideo() {
       document.getElementById('pop').classList.add('hide');
-      document.getElementById('gfy').innerHTML = '';
+      document.getElementById('gfyParent').innerHTML = '';
     }
     
     function updateMaps() {
