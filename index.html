@@ -23,7 +23,7 @@
       background-color: #000;
     }
     
-    p, h1, h2, h3, h4, h5, h6, span, select, li {
+    p, h1, h2, h3, h4, h5, h6, span, select, li, table {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       -ms-filter: invert(100%);
@@ -92,7 +92,30 @@
             <!-- VIDEO HERE -->
           </div>
           <div class="three columns">
-            <p>Info about the gfy</p>
+            <table class="u-full-width">
+              <tbody>
+                <tr>
+                  <td>From:</td>
+                  <td id="iFrom"></td>
+                </tr>
+                <tr>
+                  <td>To:</td>
+                  <td id="iTo"></td>
+                </tr>
+                <tr>
+                  <td>Team:</td>
+                  <td id="iTeam"></td>
+                </tr>
+                <tr>
+                  <td>Speed:</td>
+                  <td id="iSpeed"></td>
+                </tr>
+                <tr>
+                  <td>Jump:</td>
+                  <td id="iJump"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -193,9 +216,16 @@
         vid.appendChild(anc);
       }
       document.getElementById('gfyParent').appendChild(vid);
-      document.getElementById('pop').classList.remove('hide');
       
-      //location.href = 'http://gfycat.com/' + gfy; //does add history entry
+      //info
+      document.getElementById('iFrom').innerHTML = nade.from;
+      document.getElementById('iTo').innerHTML = nade.to;
+      document.getElementById('iTeam').innerHTML = nade.team;
+      document.getElementById('iSpeed').innerHTML = nade.speed;
+      document.getElementById('iJump').innerHTML = nade.jump;
+      
+      //show
+      document.getElementById('pop').classList.remove('hide');
     }
     
     function hideVideo() {
