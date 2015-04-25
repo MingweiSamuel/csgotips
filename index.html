@@ -26,6 +26,10 @@
       overflow: hidden;
     }
     
+    .top {
+      padding-top: 2em;
+    }
+    
     p, h1, h2, h3, h4, h5, h6, span, select, li, table {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
@@ -56,21 +60,19 @@
       opacity: 0;
     }
     
-    #pop > #gfyDiv {
+    #pop > #gfyDiv, #pop > #grey {
       position: fixed;
-      top: 50%;
+      top: 0px;
       left: 0px;
-      transform: translate(0, -50%);
       width: 100%;
+      height: 100%;
+    }
+    #pop > #gfyDiv {
+      overflow-y: auto;
       z-index: 999;
     }
     #pop > #grey {
-      position:fixed;
       z-index: 998;
-      top: 0px;
-      left: 0px;
-      width:100%;
-      height:100%;
       background-color: rgba(0, 0, 0, 0.9);
     }
     #pop.hide {
@@ -88,7 +90,7 @@
 <body>
   <div id="pop" class="hide" onclick="hideVideo();">
     <div id="grey"></div>
-    <div id="gfyDiv" class="section">
+    <div id="gfyDiv" class="top section">
       <div class="container">
         <div class="row">
           <div id="gfyParent" class="nine columns">
@@ -133,7 +135,7 @@
       </div>
     </div>
   </div>
-  <div class="section">
+  <div class="top section">
     <div class="container">
       <div class="row">
         <div class="nine columns hide">
