@@ -172,6 +172,7 @@
     function showVideo(gfy) {
       var p = document.getElementById('gfy').parentElement;
       p.innerHTML = p.innerHTML.split(oldGfy).join(gfy);
+      oldGfy = gfy;
       document.getElementById('pop').classList.remove('hide');
       //location.href = 'http://gfycat.com/' + gfy; //does add history entry
     }
