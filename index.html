@@ -171,7 +171,6 @@
       <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
       <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
       var vid = document.getElementById('gfy');
-      vid.innerHTML = '';
       if (nade.hasOwnProperty('webm')) {
         var src = document.createElement('source');
         src.setAttribute('src', nade.webm);
@@ -190,13 +189,14 @@
         anc.innerHTML = 'GIF Link';
         vid.appendChild(anc);
       }
-      vid.classList.remove('hide');
+      document.getElementById('pop').classList.remove('hide');
       
       //location.href = 'http://gfycat.com/' + gfy; //does add history entry
     }
     
     function hideVideo() {
       document.getElementById('pop').classList.add('hide');
+      document.getElementById('gfy').innerHTML = '';
     }
     
     function updateMaps() {
