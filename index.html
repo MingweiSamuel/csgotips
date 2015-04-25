@@ -89,10 +89,8 @@
       <div class="container">
         <div class="row">
           <div class="nine columns">
-            <video id="gfy" autoplay loop muted="muted" poster="http://thumbs.gfycat.com/WindingInfantileIndianglassfish-poster.jpg" width="100%">
-              <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
-              <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
-              <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>
+            <video id="gfy" autoplay loop muted="muted" width="100%">
+              <!-- SOURCES AND GIF LINK HERE -->
             </video>
           </div>
           <div class="three columns">
@@ -141,7 +139,6 @@
     var s = Snap("#map");
     var maps = {};
     var delay = 500;
-    var oldGfy = "WindingInfantileIndianglassfish";
     
     (function() {
       var xmlhttp;
@@ -169,11 +166,31 @@
       xmlhttp.send();
     })();
     
-    function showVideo(gfy) {
-      var p = document.getElementById('gfy').parentElement;
-      p.innerHTML = p.innerHTML.split(oldGfy).join(gfy);
-      oldGfy = gfy;
-      document.getElementById('pop').classList.remove('hide');
+    function showVideo(nade) {
+      /*<source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
+      <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
+      <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
+      var vid = document.getElementById('gfy');
+      vid.innerHTML = '';
+      if (nade.hasOwnProperty('webm')) {
+        var src = document.createElement('source');
+        src.setAttribute('src', nade.webm);
+        src.setAttribute('type', 'video/webm');
+        vid.appendChild(src);
+      }
+      if (nade.hasOwnProperty('mp4')) {
+        var src = document.createElement('source');
+        src.setAttribute('src', nade.mp4);
+        src.setAttribute('type', 'video/mp4');
+        vid.appendChild(src);
+      }
+      if (nade.hasOwnProperty('gif')) {
+        var anc = document.createElement('a');
+        anc.setAttribute('href', nade.gif);
+        anc.innerHTML = 'GIF Link';
+        vid.appendChild(anc);
+      }
+      
       //location.href = 'http://gfycat.com/' + gfy; //does add history entry
     }
     
