@@ -22,6 +22,9 @@
       font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #000;
     }
+    body.freeze {
+      overflow: hidden;
+    }
     
     p, h1, h2, h3, h4, h5, h6, span, select, li, table {
       -webkit-filter: invert(100%);
@@ -192,6 +195,7 @@
       <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
       <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
       /*<video id="gfy" autoplay loop muted="muted" width="100%"></video>*/
+      
       var vid = document.createElement('video');
       vid.setAttribute('autoplay', 'true');
       vid.setAttribute('loop', 'true');
@@ -225,12 +229,14 @@
       document.getElementById('iJump').innerHTML = nade.jump;
       
       //show
+      document.body.classList.add('freeze');
       document.getElementById('pop').classList.remove('hide');
     }
     
     function hideVideo() {
       document.getElementById('pop').classList.add('hide');
       document.getElementById('gfyParent').innerHTML = '';
+      document.body.classList.remove('freeze');
     }
     
     function updateMaps() {
