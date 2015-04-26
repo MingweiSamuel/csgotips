@@ -141,7 +141,7 @@
         "scale":5.0,
         "smokes":[
             {
-                "from":"T Spawn",
+                "from":"T",
                 "to":"CT Side A",
                 "team":"T",
                 "speed": "still",
@@ -157,7 +157,7 @@
                 "gif":"http:\/\/zippy.gfycat.com\/PlushEmbellishedIndianjackal.gif"
             },
             {
-                "from":"T Spawn",
+                "from":"T",
                 "to":"CT Side A",
                 "team":"T",
                 "speed": "still",
@@ -173,7 +173,7 @@
                 "gif":"http:\/\/zippy.gfycat.com\/SmartUnacceptableFirebelliedtoad.gif"
             },
             {
-                "from":"T Spawn",
+                "from":"T",
                 "to":"A Stairs",
                 "team":"T",
                 "speed": "still",
@@ -187,6 +187,22 @@
                 "webm":"http:\/\/fat.gfycat.com\/FluidUnderstatedCondor.webm",
                 "mp4":"http:\/\/giant.gfycat.com\/FluidUnderstatedCondor.mp4",
                 "gif":"http:\/\/zippy.gfycat.com\/FluidUnderstatedCondor.gif"
+            },
+            {
+                "from":"T",
+                "to":"Jungle",
+                "team":"T",
+                "speed": "still",
+                "height": "standing",
+                "loc":[
+                    816,
+                    -1417,
+                    -665,
+                    -1613
+                ],
+                "webm":"http:\/\/giant.gfycat.com\/IdealSinfulEwe.webm",
+                "mp4":"http:\/\/giant.gfycat.com\/IdealSinfulEwe.mp4",
+                "gif":"http:\/\/zippy.gfycat.com\/IdealSinfulEwe.gif"
             }
         ],
         "fires":[
