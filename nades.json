@@ -140,7 +140,38 @@
         "rot":0, 
         "scale":5.0,
         "smokes":[
-
+            {
+                "from":"T Spawn",
+                "to":"CT Side A",
+                "team":"T",
+                "speed": "still",
+                "height": "jump",
+                "loc":[
+                    1259,
+                    -872,
+                    -865,
+                    2410
+                ],
+                "webm":"http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.webm",
+                "mp4":"http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.mp4",
+                "gif":"http:\/\/zippy.gfycat.com\/PlushEmbellishedIndianjackal.gif"
+            },
+            {
+                "from":"T Spawn",
+                "to":"CT Side A",
+                "team":"T",
+                "speed": "still",
+                "height": "jump",
+                "loc":[
+                    908,
+                    -1036,
+                    -865,
+                    2410
+                ],
+                "webm":"http:\/\/fat.gfycat.com\/SmartUnacceptableFirebelliedtoad.webm",
+                "mp4":"http:\/\/giant.gfycat.com\/SmartUnacceptableFirebelliedtoad.mp4",
+                "gif":"http:\/\/zippy.gfycat.com\/SmartUnacceptableFirebelliedtoad.gif"
+            }
         ],
         "fires":[
 
