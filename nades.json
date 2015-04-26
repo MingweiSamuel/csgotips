@@ -1,7 +1,8 @@
 {
     "cache":{
         "name":"Cache",
-        "img":"http://i.imgur.com/yd7crc6.png",
+        "minimap":"http://i.imgur.com/yd7crc6.png",
+        "thumb":"http://vignette2.wikia.nocookie.net/cswikia/images/4/4e/Csgo-de-cache.png/revision/latest?cb=20140820131632",
         "pos_x":-2278,
         "pos_y":3469,
         "rot":0,
@@ -83,7 +84,8 @@
     },
     "cbble":{
         "name":"Cobblestone",
-        "img":"http://i.imgur.com/fqX78CB.png",
+        "minimap":"http://i.imgur.com/fqX78CB.png",
+        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/e/ed/Csgo-de-cbble.png/revision/latest?cb=20140820131432",
         "pos_x":-3840,
         "pos_y":3072,
         "rot":0,
@@ -100,7 +102,8 @@
     },
     "dust2":{
         "name":"Dust II",
-        "img":"http://i.imgur.com/wJ3TNB4.png",
+        "minimap":"http://i.imgur.com/wJ3TNB4.png",
+        "thumb":"http://vignette1.wikia.nocookie.net/cswikia/images/6/6f/Csgo-de-dust2.png/revision/latest?cb=20140820131233",
         "pos_x":-2400, 
         "pos_y":3383, 
         "rot":1, 
@@ -117,7 +120,8 @@
     },
     "inferno":{
         "name":"Inferno",
-        "img":"http://i.imgur.com/qhkUs44.png",
+        "minimap":"http://i.imgur.com/qhkUs44.png",
+        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/0/0f/Csgo-de-inferno.png/revision/latest?cb=20140820131037",
         "pos_x":-2200, 
         "pos_y":4400, 
         "rot":0, 
@@ -134,7 +138,8 @@
     },
     "mirage":{
         "name":"Mirage",
-        "img":"http://i.imgur.com/qRfz1fE.png",
+        "minimap":"http://i.imgur.com/qRfz1fE.png",
+        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/a/a8/Csgo-de-mirage.png/revision/latest?cb=20140820130845",
         "pos_x":-3230, 
         "pos_y":1713, 
         "rot":0, 
@@ -264,7 +269,8 @@
     },
     "nuke":{
         "name":"Nuke",
-        "img":"http://i.imgur.com/LLvNuQq.png",
+        "minimap":"http://i.imgur.com/LLvNuQq.png",
+        "thumb":"http://vignette2.wikia.nocookie.net/cswikia/images/1/11/Csgo-de-nuke.png/revision/latest?cb=20140820130704",
         "pos_x":-3050, 
         "pos_y":2200, 
         "rot":0, 
@@ -281,7 +287,8 @@
     },
     "overpass":{
         "name":"Overpass",
-        "img":"http://i.imgur.com/V3oCYth.png",
+        "minimap":"http://i.imgur.com/V3oCYth.png",
+        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/6/6e/Csgo-de-overpass.png/revision/latest?cb=20140820130544",
         "pos_x":-4831, 
         "pos_y":1781, 
         "rot":0, 
@@ -298,7 +305,8 @@
     },
     "season":{
         "name":"Season",
-        "img":"http://i.imgur.com/9xuYKbe.png",
+        "minimap":"http://i.imgur.com/9xuYKbe.png",
+        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/4/4f/Csgo-de-season.png/revision/latest?cb=20141112130252",
         "pos_x":-1003, 
         "pos_y":2521, 
         "rot":0, 
@@ -315,7 +323,8 @@
     },
     "train":{
         "name":"Train",
-        "img":"http://i.imgur.com/J2uAZL4.png",
+        "minimap":"http://i.imgur.com/J2uAZL4.png",
+        "thumb":"http://vignette1.wikia.nocookie.net/cswikia/images/7/72/Csgo-train-12102014-a-1.png/revision/latest?cb=20141211040306",
         "pos_x":-2477, 
         "pos_y":2392, 
         "rot":0, 

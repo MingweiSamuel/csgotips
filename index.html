@@ -22,9 +22,6 @@
       font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #000;
     }
-    body.freeze {
-      overflow: hidden;
-    }
     
     .top {
       padding-top: 2em;
@@ -59,24 +56,19 @@
     #map.hide {
       opacity: 0;
     }
-    
-    #pop > #gfyDiv, #pop > #grey {
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-    }
-    #pop > #gfyDiv {
-      overflow-y: auto;
-      z-index: 999;
-    }
-    #pop > #grey {
-      z-index: 998;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    #pop.hide {
+
+    .section.hide {
       display: none;
+    }
+    .thumb {
+      background-size: cover;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      margin-top: 4%;
+      cursor: pointer;
+    }
+    .thumb:hover {
+      filter: brightness(160%);
     }
   </style>
   
@@ -88,56 +80,54 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js" type="text/javascript"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/js-signals/1.0.0/js-signals.min.js" type="text/javascript"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/hasher/1.2.0/hasher.min.js" type="text/javascript"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/crossroads/0.12.0/crossroads.min.js" type="text/javascript"></script>
 </head>
 <body>
-  <div id="pop" class="hide" onclick="hideVideo();">
-    <div id="grey"></div>
-    <div id="gfyDiv" class="top section">
-      <div class="container">
-        <div class="row">
-          <div id="gfyParent" class="nine columns">
-            <!-- VIDEO HERE -->
-          </div>
-          <div class="three columns">
-            <table class="u-full-width">
-              <tbody>
-                <tr>
-                  <td>From:</td>
-                  <td id="iFrom"></td>
-                </tr>
-                <tr>
-                  <td>To:</td>
-                  <td id="iTo"></td>
-                </tr>
-                <tr>
-                  <td>Team:</td>
-                  <td id="iTeam"></td>
-                </tr>
-                <tr>
-                  <td>Speed:</td>
-                  <td id="iSpeed"></td>
-                </tr>
-                <tr>
-                  <td>Height:</td>
-                  <td id="iHeight"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="top section">
     <div class="container">
       <div class="row">
         <div class="twelve columns">
-          <h1>CS:GO Nades</h1>
+          <h1 style="cursor: pointer;" onclick="hasher.setHash('');">CS:GO Nades</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="section">
+  <div id="popPage" class="hide section page" onclick="history.back();">
+    <div class="container">
+      <div class="row">
+        <div id="gfyParent" class="nine columns">
+          <!-- VIDEO HERE -->
+        </div>
+        <div class="three columns">
+          <table class="u-full-width">
+            <tbody>
+              <tr>
+                <td>From:</td>
+                <td id="iFrom"></td>
+              </tr>
+              <tr>
+                <td>To:</td>
+                <td id="iTo"></td>
+              </tr>
+              <tr>
+                <td>Team:</td>
+                <td id="iTeam"></td>
+              </tr>
+              <tr>
+                <td>Speed:</td>
+                <td id="iSpeed"></td>
+              </tr>
+              <tr>
+                <td>Height:</td>
+                <td id="iHeight"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mapPage" class="hide section page">
     <div class="container">
       <div class="row">
         <div class="nine columns">
@@ -148,8 +138,15 @@
         <div class="three columns">
           <div class="row">
             <select class="u-full-width" id="mapSelect" onchange="hasher.setHash(this.value);">
-              <option selected disabled hidden value=''>Select Map</option>
               <!-- MAPS SELECT GOES HERE -->
+            </select>
+          </div>
+          <div class="row">
+            <select class="u-full-width" id="nadeSelect" onchange="changeGrenadeType(this.value);">
+              <option selected disabled hidden value=''>Grenade Type</option>
+              <option value='smokes'>Smoke</option>
+              <option value='fires'>Molotov</option>
+              <option value='flashes'>Flashbang</option>
             </select>
           </div>
           <div class="row">
@@ -160,6 +157,16 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="introPage" class="hide section page">
+    <div class="container">
+      <div id="thumbs" class="row">
+        <div class="twelve columns">
+          <p>Welcome to CS:GO Nades</p>
+        </div>
+      </div>
+      <!-- THUMB CONTAINS > THUMBS -->
     </div>
   </div>
   <script type="text/javascript">
@@ -181,7 +188,6 @@
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
           if(xmlhttp.status == 200){
             maps = JSON.parse(xmlhttp.responseText);
-            updateMapList();
             init();
           }
           else {
@@ -195,25 +201,129 @@
     })();
     
     function init() {
-      var hashChange = function(newHash, oldHash) {
-        if (!oldHash)
-          update();
-        else {
-          document.getElementById("map").classList.add('hide');
-          setTimeout(update, delay, hasher.getHash());
+      (function() { //update map lists
+        var mapIds = Object.keys(maps);
+        var row;
+        for (var i = 0; i < mapIds.length; i++) {
+          var map = maps[mapIds[i]];
+          var opt = document.createElement('option')
+          opt.setAttribute('value', mapIds[i]);
+          opt.innerHTML = map.name;
+          document.getElementById('mapSelect').appendChild(opt);
+
+          if (i % 2 === 0) {
+            row = document.createElement('div');
+            row.classList.add('row');
+            document.getElementById('thumbs').appendChild(row);
+          }
+          var thumb = document.createElement('div');
+          thumb.className = 'thumb six columns';
+          thumb.innerHTML = '<h5>' + map.name + '</h5>';
+          thumb.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('" + map.thumb + "')";
+          thumb.onclick = function() {
+            hasher.setHash(this);
+          }.bind(mapIds[i]);
+          row.appendChild(thumb);
         }
+      })();
+
+      function hideAll() {
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++)
+          pages[i].classList.add('hide');
+      }
+
+      function showMap(mapName, callback) {
+        console.log('Showing map: ' + mapName)
+        if (!maps.hasOwnProperty(mapName))
+          return false;
+        document.getElementById('gfyParent').innerHTML = ''; //clear video from memory
+
+        var mapPage = document.getElementById('mapPage');
+        if (mapPage.classList.contains('hide')) { // map is hidden if offsetParent === null, don't bother fading out
+          hideAll();
+          mapPage.classList.remove('hide');
+          updateMap(mapName);
+          if (callback)
+            callback();
+        }
+        else {
+          document.getElementById('map').classList.add('hide');
+          setTimeout(function(mapName, callback) {
+            updateMap(mapName);
+            if (callback)
+              callback();
+          }, delay, mapName, callback);
+        }
+        return true;
+      }
+
+      function showVideo(mapName, nadeType, id) {
+        console.log('Showing video');
+        if (!maps.hasOwnProperty(mapName))
+          return false;
+        if (!maps[mapName].hasOwnProperty(nadeType))
+          return false;
+        if (!maps[mapName][nadeType].hasOwnProperty(id))
+          return false;
+        hideAll();
+        document.getElementById('popPage').classList.remove('hide');
+        updateVideo(maps[mapName][nadeType][id]);
+        return true;
+      }
+
+      function revert() {
+        console.log('Going back');
+        setTimeout(function() {
+          history.back();
+        }, 0);
+      }
+
+      crossroads.addRoute('', function() {
+        hideAll();
+        document.getElementById('introPage').classList.remove('hide');
+      });
+      crossroads.addRoute('{mapName}', function(mapName) {
+        console.log('MAP: ' + mapName);
+        document.getElementById('nadeSelect').value = '';
+        if (!showMap(mapName))
+          revert();
+      });
+      crossroads.addRoute('{mapName}/{nadeType}', function(mapName, nadeType) {
+        console.log('MAP w/ NADES: ' + [mapName, nadeType]. join(', '));
+        document.getElementById('nadeSelect').value = nadeType;
+        if (!showMap(mapName, function() {
+          if (!updateMapNades(mapName, nadeType))
+            revert();
+        }))
+          revert();
+      });
+      crossroads.addRoute('{mapName}/{nadeType}/{id}', function(mapName, nadeType, id) {
+        console.log('VIDEO: ' + [mapName, nadeType, id].join(', '));
+        if (!showVideo(mapName, nadeType, id))
+          revert();
+      });
+
+      var hashChange = function(newHash, oldHash) {
+        crossroads.parse(newHash);
       };
+      hasher.appendHash = '/';
       hasher.changed.add(hashChange); //add hash change listener
       hasher.initialized.add(hashChange); //add initialized listener (to grab initial value in case it is already set)
       hasher.init(); //initialize hasher (start listening for history changes)
     }
+
+    function changeGrenadeType(type) {
+      hasher.setHash(hasher.getHashAsArray()[0], type);
+    }
     
-    function showVideo(nade) {
+    function updateVideo(nade) {
       /*<source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
       <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
       <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
       /*<video id="gfy" autoplay loop muted="muted" width="100%"></video>*/
-      
+      document.getElementById('gfyParent').innerHTML = '' //clear old video
+
       var vid = document.createElement('video');
       vid.setAttribute('autoplay', 'true');
       vid.setAttribute('loop', 'true');
@@ -245,32 +355,9 @@
       document.getElementById('iTeam').innerHTML = nade.team;
       document.getElementById('iSpeed').innerHTML = nade.speed;
       document.getElementById('iHeight').innerHTML = nade.height;
-      
-      //show
-      document.body.classList.add('freeze');
-      document.getElementById('pop').classList.remove('hide');
     }
     
-    function hideVideo() {
-      document.getElementById('pop').classList.add('hide');
-      document.getElementById('gfyParent').innerHTML = '';
-      document.body.classList.remove('freeze');
-    }
-    
-    function updateMapList() {
-      var mapIds = Object.keys(maps);
-      for (var i = 0; i < mapIds.length; i++) {
-        var opt = document.createElement('option')
-        opt.setAttribute('value', mapIds[i]);
-        opt.innerHTML = maps[mapIds[i]].name;
-        document.getElementById('mapSelect').appendChild(opt);
-      }
-    }
-    
-    function update() {
-      var mapName = hasher.getHash();
-      console.log("Updating map to: " + mapName);
-      
+    function updateMap(mapName) {
       //reset some things
       document.getElementById('mapSelect').value = mapName;
       document.getElementById('nadeList').innerHTML = '';
@@ -288,11 +375,26 @@
       document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
     
       
-      var image = s.image(map.img, 0, 0, scale, scale);
+      var image = s.image(map.minimap, 0, 0, scale, scale);
       image.node.onload = function() {
         document.getElementById("map").classList.remove('hide');
       };
-    
+      
+      return true;
+    }
+
+    function updateMapNades(mapName, type) {
+      if (!maps.hasOwnProperty(mapName))
+        return false;
+
+      var map = maps[mapName];
+      if (!map.hasOwnProperty(type)) {
+        console.log(type + ' not found for ' + mapName)
+        return false;
+      }
+
+      var scale = map.scale * 1024;
+
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
       var dark = "#999";
@@ -301,11 +403,11 @@
         return i % 2 == 0 ? n - map.pos_x : map.pos_y - n;
       };
     
-      for (var i = 0; i < map.smokes.length; i++) {
-        var smoke = map.smokes[i];
-        if (smoke.loc.length < 2)
+      for (var i = 0; i < map[type].length; i++) {
+        var nade = map[type][i];
+        if (nade.loc.length < 2)
           continue;
-        var loc = smoke.loc.map(locMapper);
+        var loc = nade.loc.map(locMapper);
         
         var polyline = s.polyline(loc).attr({
           strokeWidth: 32,
@@ -339,17 +441,16 @@
           opacity: 0.7,
           filter: shadow
         }).hover(enter, leave).click(function() {
-          showVideo(this);
-        }.bind(smoke));
+          hasher.setHash(this.mapName, this.type, this.i);
+        }.bind({mapName: mapName, type: type, i: i}));
         
         //add list item
         var li = document.createElement('li')
-        li.innerHTML = smoke.from + ' to ' + smoke.to + ' (' + smoke.team + ')';
+        li.innerHTML = nade.from + ' to ' + nade.to + ' (' + nade.team + ')';
         li.addEventListener("mouseenter", enter);
         li.addEventListener("mouseleave", leave);
         document.getElementById('nadeList').appendChild(li);
       }
-      
       return true;
     }
   </script>
