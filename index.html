@@ -181,8 +181,8 @@
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
           if(xmlhttp.status == 200){
             maps = JSON.parse(xmlhttp.responseText);
-            updateMaps();
-            update();
+            updateMapList();
+            init();
           }
           else {
              alert('Error ' + xmlhttp.status);
@@ -194,18 +194,19 @@
       xmlhttp.send();
     })();
     
-    function hashChange(new, old){
-      if (!old)
-        update();
-      else {
-        document.getElementById("map").classList.add('hide');
-        setTimeout(update, delay);
-      }
+    function init() {
+      var hashChange = function(newHash, oldHash) {
+        if (!oldHash)
+          update();
+        else {
+          document.getElementById("map").classList.add('hide');
+          setTimeout(update, delay, hasher.getHash());
+        }
+      };
+      hasher.changed.add(hashChange); //add hash change listener
+      hasher.initialized.add(hashChange); //add initialized listener (to grab initial value in case it is already set)
+      hasher.init(); //initialize hasher (start listening for history changes)
     }
-    hasher.changed.add(hashChange); //add hash change listener
-    hasher.initialized.add(hashChange); //add initialized listener (to grab initial value in case it is already set)
-    hasher.init(); //initialize hasher (start listening for history changes)
-
     
     function showVideo(nade) {
       /*<source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
@@ -256,7 +257,7 @@
       document.body.classList.remove('freeze');
     }
     
-    function updateMaps() {
+    function updateMapList() {
       var mapIds = Object.keys(maps);
       for (var i = 0; i < mapIds.length; i++) {
         var opt = document.createElement('option')
@@ -267,7 +268,7 @@
     }
     
     function update() {
-      var mapName = location.hash.substring(1);
+      var mapName = hasher.getHash();
       console.log("Updating map to: " + mapName)
       if (!maps.hasOwnProperty(mapName)) {
         if (mapName)
