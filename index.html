@@ -269,14 +269,18 @@
     
     function update() {
       var mapName = hasher.getHash();
-      console.log("Updating map to: " + mapName)
+      console.log("Updating map to: " + mapName);
+      
+      //reset some things
+      document.getElementById('mapSelect').value = mapName;
+      document.getElementById('nadeList').innerHTML = '';
+      
+      //check if map exists
       if (!maps.hasOwnProperty(mapName)) {
         if (mapName)
           alert("Invalid map: " + mapName);
         return false;
       }
-      document.getElementById('mapSelect').value = mapName;
-      document.getElementById('nadeList').innerHTML = '';
       var map = maps[mapName];
       
       s.clear(); //clear the svg
