@@ -427,6 +427,7 @@
         });
         var start = s.circle(loc[0], loc[1], 60);
         var end = smoke.use();
+        end.insertAfter(start);
         end.attr({
           x: loc[loc.length - 2],
           y: loc[loc.length - 1]
