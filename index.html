@@ -423,7 +423,9 @@
           fillOpacity: 0,
         });
         var start = s.circle(loc[0], loc[1], 60);
+        console.log('making cloud');
         var end = s.use('cloud');
+        console.log('cloud used');
         end.attr({
           x: loc[loc.length - 2],
           y: loc[loc.length - 1]
