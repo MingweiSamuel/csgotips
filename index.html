@@ -172,6 +172,11 @@
   <script type="text/javascript">
   
     var s = Snap("#map");
+    var cloud = s.path('M 80 0 C 101.219 21.213, 86.569 56.569, 56.569 56.569 '
+      + 'C 56.569 86.569, 21.213 101.213, 0 80 C -21.213 101.213, -56.569 86.569, -56.569 56.569 '
+      + 'C -86.569 56.569, -101.213 21.213, -80 0 C -101.213 -21.213, -86.569 -56.569, -56.569 -56.569 '
+      + 'C -56.569 -86.569, -21.213 -101.213, 0 -80 C 21.213 -101.213, 56.569 -86.569, 56.569 -56.569 '
+      + 'C 86.569 -56.569, 101.219 -21.213, 80 0 Z').toDefs();
     var maps = {};
     var delay = 500;
     
@@ -421,7 +426,9 @@
           fillOpacity: 0,
         });
         var start = s.circle(loc[0], loc[1], 60);
-        var end = s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
+        var end = cloud.use();
+        end.transform('translate(' + loc[loc.length - 2] + ' ' + loc[loc.length -1] + ')');
+        //s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
         var group = s.group(start, polyline, end);
         group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
