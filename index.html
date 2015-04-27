@@ -424,7 +424,10 @@
         });
         var start = s.circle(loc[0], loc[1], 60);
         var end = s.use('cloud');
-        end.transform('translate(' + loc[loc.length - 2] + ' ' + loc[loc.length -1] + ')');
+        end.attr({
+          x: loc[loc.length - 2],
+          y: loc[loc.length - 1]
+        });
         //s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
         var group = s.group(start, polyline, end);
