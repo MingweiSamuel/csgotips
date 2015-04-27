@@ -137,7 +137,7 @@
         </div>
         <div class="three columns">
           <div class="row">
-            <select class="u-full-width" id="mapSelect" onchange="hasher.setHash(this.value);">
+            <select class="u-full-width" id="mapSelect" onchange="changeMap(this.value);">
               <!-- MAPS SELECT GOES HERE -->
             </select>
           </div>
@@ -311,6 +311,13 @@
       hasher.changed.add(hashChange); //add hash change listener
       hasher.initialized.add(hashChange); //add initialized listener (to grab initial value in case it is already set)
       hasher.init(); //initialize hasher (start listening for history changes)
+    }
+    
+    function changeMap(mapName) {
+      if (hasher.getHashAsArray()[1])
+        hasher.setHash(mapName, hasher.getHashAsArray()[1]);
+      else
+        hasher.setHash(mapName);
     }
 
     function changeGrenadeType(type) {
