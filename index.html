@@ -184,6 +184,11 @@
         + 'C 86.569 -56.569, 101.219 -21.213, 80 0 Z').toDefs().attr({
         id: 'smokes'
       }).transform('scale(1.4)');
+      s.path('M 40 0 L 124.724 51.662 L 28.284 28.284 L 51.662 124.724 L 0 40 L -51.662 124.724 '
+        + 'L -28.284 28.284 L -124.724 52.662 L -40 0 L -124.724 -52.662 L -28.284 -28.284 '
+        + 'L -52.662 -124.724 L 0 -40 L 52.662 -124.724 L 28.284 -28.284 L 124.724 -52.662 Z').toDefs().attr({
+        id: 'flashes'
+      });
     }
     //addDefs();
     var maps = {};
@@ -420,7 +425,11 @@
 
       var shadow = s.filter(Snap.filter.shadow(0, 0, 20, "#000", 1.0));
       
-      var dark = "#999";
+      var dark = {
+        smokes: '#999',
+        fires: '#B10',
+        flashes: '#0AA'
+      }[type];
       var light = "#fff";
       var locMapper = function(n, i) {
         return i % 2 == 0 ? n - map.pos_x : map.pos_y - n;
@@ -433,10 +442,18 @@
         var loc = nade.loc.map(locMapper);
         
         var polyline = s.polyline(loc).attr({
-          strokeWidth: 32,
+          strokeWidth: {
+            smokes: 32,
+            fires: 28,
+            flashes: 24
+          }[type],
           fillOpacity: 0,
         });
-        var start = s.circle(loc[0], loc[1], 60);
+        var start = s.circle(loc[0], loc[1], {
+          smokes: 60,
+          fires: 50,
+          flashes: 40
+        }[type]);
         var end = s.use(type);
         //end.insertAfter(start);
         end.attr({
