@@ -1,406 +1,363 @@
 {
-    "cache":{
-        "name":"Cache",
-        "minimap":"http://i.imgur.com/yd7crc6.png",
-        "thumb":"http://vignette2.wikia.nocookie.net/cswikia/images/4/4e/Csgo-de-cache.png/revision/latest?cb=20140820131632",
-        "pos_x":-2278,
-        "pos_y":3469,
-        "rot":0,
-        "scale":5.5,
-        "smokes":[
-            {
-                "from":"Van",
-                "to":"CT Mid",
-                "team":"T",
-                "speed": "still",
-                "height": "jump",
-                "loc":[
-                    1730,
-                    976,
-                    -330,
-                    16
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.gif"
-            },
-            {
-                "from":"Garage",
-                "to":"Left Mid",
-                "team":"T",
-                "speed": "still",
-                "height": "stand",
-                "loc":[
-                    1760,
-                    318,
-                    300,
-                    158
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.gif"
-            },
-            {
-                "from":"Garage",
-                "to":"Right Mid",
-                "team":"T",
-                "speed": "still",
-                "height": "stand",
-                "loc":[
-                    1760,
-                    202,
-                    300,
-                    373
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.gif"
-            },
-            {
-                "from":"B Halls",
-                "to":"B Main",
-                "team":"T",
-                "speed": "sprint",
-                "height": "stand",
-                "loc":[
-                    1100,
-                    -718,
-                    660,
-                    -1175,
-                    212,
-                    -636
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/AliveCircularCuckoo.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/AliveCircularCuckoo.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/AliveCircularCuckoo.gif"
-            }
-        ],
-        "fires":[
+    "cache": {
+        "name": "Cache",
+        "minimap": "http://i.imgur.com/yd7crc6.png",
+        "thumb": "http://vignette2.wikia.nocookie.net/cswikia/images/4/4e/Csgo-de-cache.png/revision/latest?cb=20140820131632",
+        "pos_x": -2278,
+        "pos_y": 3469,
+        "rot": 0,
+        "scale": 5.5,
+        "smokes": [{
+            "from": "Van",
+            "to": "CT Mid",
+            "team": "T",
+            "speed": "still",
+            "height": "jump",
+            "throw_speed": "full throw",
+            "loc": [
+                1730,
+                976, -330,
+                16
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.gif"
+        }, {
+            "from": "Garage",
+            "to": "Left Mid",
+            "team": "T",
+            "speed": "still",
+            "height": "stand",
+            "throw_speed": "full throw",
+            "loc": [
+                1760,
+                318,
+                300,
+                158
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.gif"
+        }, {
+            "from": "Garage",
+            "to": "Right Mid",
+            "team": "T",
+            "speed": "still",
+            "height": "stand",
+            "throw_speed": "full throw",
+            "loc": [
+                1760,
+                202,
+                300,
+                373
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.gif"
+        }, {
+            "from": "B Halls",
+            "to": "B Main",
+            "team": "T",
+            "speed": "sprint",
+            "height": "stand",
+            "throw_speed": "full throw",
+            "loc": [
+                1100, -718,
+                660, -1175,
+                212, -636
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.gif"
+        }],
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "cbble":{
-        "name":"Cobblestone",
-        "minimap":"http://i.imgur.com/fqX78CB.png",
-        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/e/ed/Csgo-de-cbble.png/revision/latest?cb=20140820131432",
-        "pos_x":-3840,
-        "pos_y":3072,
-        "rot":0,
-        "scale":6,
-        "smokes":[
+    "cbble": {
+        "name": "Cobblestone",
+        "minimap": "http://i.imgur.com/fqX78CB.png",
+        "thumb": "http://vignette3.wikia.nocookie.net/cswikia/images/e/ed/Csgo-de-cbble.png/revision/latest?cb=20140820131432",
+        "pos_x": -3840,
+        "pos_y": 3072,
+        "rot": 0,
+        "scale": 6,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "dust2":{
-        "name":"Dust II",
-        "minimap":"http://i.imgur.com/wJ3TNB4.png",
-        "thumb":"http://vignette1.wikia.nocookie.net/cswikia/images/6/6f/Csgo-de-dust2.png/revision/latest?cb=20140820131233",
-        "pos_x":-2400, 
-        "pos_y":3383, 
-        "rot":1, 
-        "scale":4.4,
-        "smokes":[
+    "dust2": {
+        "name": "Dust II",
+        "minimap": "http://i.imgur.com/wJ3TNB4.png",
+        "thumb": "http://vignette1.wikia.nocookie.net/cswikia/images/6/6f/Csgo-de-dust2.png/revision/latest?cb=20140820131233",
+        "pos_x": -2400,
+        "pos_y": 3383,
+        "rot": 1,
+        "scale": 4.4,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "inferno":{
-        "name":"Inferno",
-        "minimap":"http://i.imgur.com/qhkUs44.png",
-        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/0/0f/Csgo-de-inferno.png/revision/latest?cb=20140820131037",
-        "pos_x":-2200, 
-        "pos_y":4400, 
-        "rot":0, 
-        "scale":5.9,
-        "smokes":[
+    "inferno": {
+        "name": "Inferno",
+        "minimap": "http://i.imgur.com/qhkUs44.png",
+        "thumb": "http://vignette3.wikia.nocookie.net/cswikia/images/0/0f/Csgo-de-inferno.png/revision/latest?cb=20140820131037",
+        "pos_x": -2200,
+        "pos_y": 4400,
+        "rot": 0,
+        "scale": 5.9,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "mirage":{
-        "name":"Mirage",
-        "minimap":"http://i.imgur.com/qRfz1fE.png",
-        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/a/a8/Csgo-de-mirage.png/revision/latest?cb=20140820130845",
-        "pos_x":-3230, 
-        "pos_y":1713, 
-        "rot":0, 
-        "scale":5.0,
-        "smokes":[
-            {
-                "from":"T",
-                "to":"CT Side A",
-                "team":"T",
-                "speed": "still",
-                "height": "jump",
-                "loc":[
-                    1259,
-                    -872,
-                    -865,
-                    -2410
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/PlushEmbellishedIndianjackal.gif"
-            },
-            {
-                "from":"T",
-                "to":"CT Side A",
-                "team":"T",
-                "speed": "still",
-                "height": "jump",
-                "loc":[
-                    908,
-                    -1036,
-                    -865,
-                    -2410
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/SmartUnacceptableFirebelliedtoad.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/SmartUnacceptableFirebelliedtoad.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/SmartUnacceptableFirebelliedtoad.gif"
-            },
-            {
-                "from":"T",
-                "to":"A Stairs",
-                "team":"T",
-                "speed": "still",
-                "height": "standing",
-                "loc":[
-                    1145,
-                    -1184,
-                    -465,
-                    -1611
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/FluidUnderstatedCondor.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/FluidUnderstatedCondor.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/FluidUnderstatedCondor.gif"
-            },
-            {
-                "from":"T",
-                "to":"Jungle",
-                "team":"T",
-                "speed": "still",
-                "height": "standing",
-                "loc":[
-                    816,
-                    -1417,
-                    -665,
-                    -1613
-                ],
-                "webm":"http:\/\/giant.gfycat.com\/IdealSinfulEwe.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/IdealSinfulEwe.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/IdealSinfulEwe.gif"
-            },
-            {
-                "from":"T",
-                "to":"Mid A Site",
-                "team":"T",
-                "speed": "still",
-                "height": "standing",
-                "loc":[
-                    897,
-                    -1228,
-                    -432,
-                    -2036
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/ImperfectYellowChafer.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/ImperfectYellowChafer.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/ImperfectYellowChafer.gif"
-            },
-            {
-                "from":"T",
-                "to":"Back A Site",
-                "team":"T",
-                "speed": "still",
-                "height": "standing",
-                "loc":[
-                    685,
-                    -1184,
-                    -767,
-                    -2094
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/FormalLawfulHartebeest.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/FormalLawfulHartebeest.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/FormalLawfulHartebeest.gif"
-            },
-            {
-                "from":"Palace",
-                "to":"Under Balcony",
-                "team":"T",
-                "speed": "still",
-                "height": "standing",
-                "loc":[
-                    325,
-                    -2208,
-                    185,
-                    -2393,
-                    -146,
-                    -1947
-                ],
-                "webm":"http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/QuickHeavyAkitainu.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.gif"
-            }
-        ],
-        "fires":[
+    "mirage": {
+        "name": "Mirage",
+        "minimap": "http://i.imgur.com/qRfz1fE.png",
+        "thumb": "http://vignette3.wikia.nocookie.net/cswikia/images/a/a8/Csgo-de-mirage.png/revision/latest?cb=20140820130845",
+        "pos_x": -3230,
+        "pos_y": 1713,
+        "rot": 0,
+        "scale": 5.0,
+        "smokes": [{
+            "from": "T",
+            "to": "CT Side A",
+            "team": "T",
+            "speed": "still",
+            "height": "jump",
+            "throw_speed": "full throw",
+            "loc": [
+                1259, -872, -865, -2410
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/PlushEmbellishedIndianjackal.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/PlushEmbellishedIndianjackal.gif"
+        }, {
+            "from": "T",
+            "to": "CT Side A",
+            "team": "T",
+            "speed": "still",
+            "height": "jump",
+            "throw_speed": "full throw",
+            "loc": [
+                908, -1036, -865, -2410
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/SmartUnacceptableFirebelliedtoad.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/SmartUnacceptableFirebelliedtoad.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/SmartUnacceptableFirebelliedtoad.gif"
+        }, {
+            "from": "T",
+            "to": "A Stairs",
+            "team": "T",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [
+                1145, -1184, -465, -1611
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/FluidUnderstatedCondor.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/FluidUnderstatedCondor.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/FluidUnderstatedCondor.gif"
+        }, {
+            "from": "T",
+            "to": "Jungle",
+            "team": "T",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [
+                816, -1417, -665, -1613
+            ],
+            "webm": "http:\/\/giant.gfycat.com\/IdealSinfulEwe.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/IdealSinfulEwe.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/IdealSinfulEwe.gif"
+        }, {
+            "from": "T",
+            "to": "Mid A Site",
+            "team": "T",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [
+                897, -1228, -432, -2036
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/ImperfectYellowChafer.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/ImperfectYellowChafer.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/ImperfectYellowChafer.gif"
+        }, {
+            "from": "T",
+            "to": "Back A Site",
+            "team": "T",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [
+                685, -1184, -767, -2094
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/FormalLawfulHartebeest.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/FormalLawfulHartebeest.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/FormalLawfulHartebeest.gif"
+        }, {
+            "from": "Palace",
+            "to": "Under Balcony",
+            "team": "T",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [
+                325, -2208,
+                185, -2393, -146, -1947
+            ],
+            "webm": "http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/QuickHeavyAkitainu.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.gif"
+        }],
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "nuke":{
-        "name":"Nuke",
-        "minimap":"http://i.imgur.com/LLvNuQq.png",
-        "thumb":"http://vignette2.wikia.nocookie.net/cswikia/images/1/11/Csgo-de-nuke.png/revision/latest?cb=20140820130704",
-        "pos_x":-3050, 
-        "pos_y":2200, 
-        "rot":0, 
-        "scale":6.5,
-        "smokes":[
+    "nuke": {
+        "name": "Nuke",
+        "minimap": "http://i.imgur.com/LLvNuQq.png",
+        "thumb": "http://vignette2.wikia.nocookie.net/cswikia/images/1/11/Csgo-de-nuke.png/revision/latest?cb=20140820130704",
+        "pos_x": -3050,
+        "pos_y": 2200,
+        "rot": 0,
+        "scale": 6.5,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "overpass":{
-        "name":"Overpass",
-        "minimap":"http://i.imgur.com/V3oCYth.png",
-        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/6/6e/Csgo-de-overpass.png/revision/latest?cb=20140820130544",
-        "pos_x":-4831, 
-        "pos_y":1781, 
-        "rot":0, 
-        "scale":5.2,
-        "smokes":[
+    "overpass": {
+        "name": "Overpass",
+        "minimap": "http://i.imgur.com/V3oCYth.png",
+        "thumb": "http://vignette3.wikia.nocookie.net/cswikia/images/6/6e/Csgo-de-overpass.png/revision/latest?cb=20140820130544",
+        "pos_x": -4831,
+        "pos_y": 1781,
+        "rot": 0,
+        "scale": 5.2,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "season":{
-        "name":"Season",
-        "minimap":"http://i.imgur.com/9xuYKbe.png",
-        "thumb":"http://vignette3.wikia.nocookie.net/cswikia/images/4/4f/Csgo-de-season.png/revision/latest?cb=20141112130252",
-        "pos_x":-1003, 
-        "pos_y":2521, 
-        "rot":0, 
-        "scale":5.0,
-        "smokes":[
+    "season": {
+        "name": "Season",
+        "minimap": "http://i.imgur.com/9xuYKbe.png",
+        "thumb": "http://vignette3.wikia.nocookie.net/cswikia/images/4/4f/Csgo-de-season.png/revision/latest?cb=20141112130252",
+        "pos_x": -1003,
+        "pos_y": 2521,
+        "rot": 0,
+        "scale": 5.0,
+        "smokes": [
 
         ],
-        "fires":[
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     },
-    "train":{
-        "name":"Train",
-        "minimap":"http://i.imgur.com/J2uAZL4.png",
-        "thumb":"http://vignette1.wikia.nocookie.net/cswikia/images/7/72/Csgo-train-12102014-a-1.png/revision/latest?cb=20141211040306",
-        "pos_x":-2477, 
-        "pos_y":2392, 
-        "rot":0, 
-        "scale":4.7,
-        "smokes":[
-            {
-                "from":"T Spawn",
-                "to":"Heaven",
-                "team":"T",
-                "speed": "still",
-                "height": "jump",
-                "loc":[
-                    -538,
-                    1397,
-                    730,
-                    -345
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/GlisteningBlondCrab.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/GlisteningBlondCrab.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/GlisteningBlondCrab.gif"
-            },
-            {
-                "from":"T Spawn",
-                "to":"Z Connector",
-                "team":"T",
-                "speed": "still",
-                "height": "jump",
-                "loc":[
-                    -755,
-                    1449,
-                    562,
-                    -400
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/BeautifulBlueCobra.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/BeautifulBlueCobra.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/BeautifulBlueCobra.gif"
-            },
-            {
-                "from":"B Halls",
-                "to":"Z Connector",
-                "team":"T",
-                "speed": "sprint",
-                "height": "standing",
-                "loc":[
-                    -1160,
-                    -1048,
-                    1073,
-                    -794
-                ],
-                "webm":"http:\/\/fat.gfycat.com\/ShallowOnlyEland.webm",
-                "mp4":"http:\/\/giant.gfycat.com\/ShallowOnlyEland.mp4",
-                "gif":"http:\/\/zippy.gfycat.com\/ShallowOnlyEland.gif"
-            },
-            {
-                "from":"B Halls",
-                "to":"B Site",
-                "team":"T",
-                "speed": "sprint",
-                "height": "standing",
-                "loc":[
-                    -1160,
-                    -1301,
-                    -569,
-                    -867,
-                    -77,
-                    -1149
-                ],
-                "webm":"http:\/\/zippy.gfycat.com\/DazzlingWellwornFirefly.webm",
-                "mp4":"http:\/\/fat.gfycat.com\/DazzlingWellwornFirefly.mp4",
-                "gif":"http:\/\/giant.gfycat.com\/DazzlingWellwornFirefly.gif"
-            }
-        ],
-        "fires":[
+    "train": {
+        "name": "Train",
+        "minimap": "http://i.imgur.com/J2uAZL4.png",
+        "thumb": "http://vignette1.wikia.nocookie.net/cswikia/images/7/72/Csgo-train-12102014-a-1.png/revision/latest?cb=20141211040306",
+        "pos_x": -2477,
+        "pos_y": 2392,
+        "rot": 0,
+        "scale": 4.7,
+        "smokes": [{
+            "from": "T Spawn",
+            "to": "Heaven",
+            "team": "T",
+            "speed": "still",
+            "height": "jump",
+            "throw_speed": "full throw",
+            "loc": [-538,
+                1397,
+                730, -345
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/GlisteningBlondCrab.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/GlisteningBlondCrab.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/GlisteningBlondCrab.gif"
+        }, {
+            "from": "T Spawn",
+            "to": "Z Connector",
+            "team": "T",
+            "speed": "still",
+            "height": "jump",
+            "throw_speed": "full throw",
+            "loc": [-755,
+                1449,
+                562, -400
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/BeautifulBlueCobra.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/BeautifulBlueCobra.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/BeautifulBlueCobra.gif"
+        }, {
+            "from": "B Halls",
+            "to": "Z Connector",
+            "team": "T",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [-1160, -1048,
+                1073, -794
+            ],
+            "webm": "http:\/\/fat.gfycat.com\/ShallowOnlyEland.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/ShallowOnlyEland.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/ShallowOnlyEland.gif"
+        }, {
+            "from": "B Halls",
+            "to": "B Site",
+            "team": "T",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [-1160, -1301, -569, -867, -77, -1149],
+            "webm": "http:\/\/zippy.gfycat.com\/DazzlingWellwornFirefly.webm",
+            "mp4": "http:\/\/fat.gfycat.com\/DazzlingWellwornFirefly.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/DazzlingWellwornFirefly.gif"
+        }],
+        "fires": [
 
         ],
-        "flashes":[
+        "flashes": [
 
         ]
     }

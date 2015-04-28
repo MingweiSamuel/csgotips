@@ -121,6 +121,10 @@
                 <td>Height:</td>
                 <td id="iHeight"></td>
               </tr>
+              <tr>
+                <td>Throw Speed:</td>
+                <td id="iThrow"></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -372,6 +376,7 @@
       document.getElementById('iTeam').innerHTML = nade.team;
       document.getElementById('iSpeed').innerHTML = nade.speed;
       document.getElementById('iHeight').innerHTML = nade.height;
+      document.getElementById('iThrow').innerHTML = nade.throw_speed;
     }
     
     function updateMap(mapName) {
