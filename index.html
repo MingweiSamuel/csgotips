@@ -172,11 +172,16 @@
   <script type="text/javascript">
   
     var s = Snap("#map");
-    var smoke = s.path('M 80 0 C 101.219 21.213, 86.569 56.569, 56.569 56.569 '
-      + 'C 56.569 86.569, 21.213 101.213, 0 80 C -21.213 101.213, -56.569 86.569, -56.569 56.569 '
-      + 'C -86.569 56.569, -101.213 21.213, -80 0 C -101.213 -21.213, -86.569 -56.569, -56.569 -56.569 '
-      + 'C -56.569 -86.569, -21.213 -101.213, 0 -80 C 21.213 -101.213, 56.569 -86.569, 56.569 -56.569 '
-      + 'C 86.569 -56.569, 101.219 -21.213, 80 0 Z').toDefs();
+    function addDefs() {
+      s.path('M 80 0 C 101.219 21.213, 86.569 56.569, 56.569 56.569 '
+        + 'C 56.569 86.569, 21.213 101.213, 0 80 C -21.213 101.213, -56.569 86.569, -56.569 56.569 '
+        + 'C -86.569 56.569, -101.213 21.213, -80 0 C -101.213 -21.213, -86.569 -56.569, -56.569 -56.569 '
+        + 'C -56.569 -86.569, -21.213 -101.213, 0 -80 C 21.213 -101.213, 56.569 -86.569, 56.569 -56.569 '
+        + 'C 86.569 -56.569, 101.219 -21.213, 80 0 Z').toDefs().attr({
+        id: 'smokes'
+      }).transform('scale(1.4)');
+    }
+    //addDefs();
     var maps = {};
     var delay = 500;
     
@@ -383,6 +388,7 @@
       var map = maps[mapName];
       
       s.clear(); //clear the svg
+      addDefs(); //s.clear is supposed to leave the defs, but it clears them >:(
       var scale = map.scale * 1024;
       document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
     
@@ -426,15 +432,19 @@
           fillOpacity: 0,
         });
         var start = s.circle(loc[0], loc[1], 60);
-        var end = smoke.use();
-        end.insertAfter(start);
+        var end = s.use(type);
+        //end.insertAfter(start);
         end.attr({
           x: loc[loc.length - 2],
           y: loc[loc.length - 1]
         });
+        var fakeEnd = s.circle(loc[loc.length - 2], loc[loc.length - 1], 135).attr({ //makes sure smoke unhighlights
+          fill: 'transparent',
+          stroke: 'transparent'
+        });
         //s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
-        var group = s.group(start, polyline, end);
+        var group = s.group(start, polyline, end, fakeEnd);
         group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
         
         var enter = function() {
