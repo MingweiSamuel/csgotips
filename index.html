@@ -312,7 +312,12 @@
         console.log('MAP w/ NADES: ' + [mapName, nadeType]. join(', '));
         document.getElementById('nadeSelect').value = nadeType;
         if (!showMap(mapName, function() {
-          if (!updateMapNades(mapName, nadeType))
+          if (nadeType === 'all') {
+            updateMapNades(mapName, 'smokes');
+            updateMapNades(mapName, 'fires');
+            updateMapNades(mapName, 'flashes');
+          }
+          else if (!updateMapNades(mapName, nadeType))
             revert();
         }))
           revert();
