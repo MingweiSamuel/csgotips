@@ -213,6 +213,28 @@
             "webm": "http:\/\/fat.gfycat.com\/PoliteBlissfulBonobo.webm",
             "mp4": "http:\/\/giant.gfycat.com\/PoliteBlissfulBonobo.mp4",
             "gif": "http:\/\/zippy.gfycat.com\/PoliteBlissfulBonobo.gif"
+        }, {
+            "from": "Palace",
+            "to": "Balcony",
+            "team": "T",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [368, -2376, 3, -2237, 107, -2199, -48, -2130],
+            "webm": "http:\/\/fat.gfycat.com\/PeacefulCleverCuscus.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/PeacefulCleverCuscus.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/PeacefulCleverCuscus.gif"
+        }, {
+            "from": "T",
+            "to": "A Ramp",
+            "team": "T",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [644, -1433, 412, -1733, 143, -1405],
+            "webm": "http:\/\/fat.gfycat.com\/CanineCloudyAnteater.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/CanineCloudyAnteater.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/CanineCloudyAnteater.gif"
         }]
     },
     "nuke": {
