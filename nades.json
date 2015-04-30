@@ -198,6 +198,17 @@
             "webm": "http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.webm",
             "mp4": "http:\/\/giant.gfycat.com\/QuickHeavyAkitainu.mp4",
             "gif": "http:\/\/zippy.gfycat.com\/QuickHeavyAkitainu.gif"
+        }, {
+            "from": "T",
+            "to": "Window",
+            "team": "T",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [1392, -1052, -1150, -624],
+            "webm": "http:\/\/giant.gfycat.com\/ThirstyUntidyCottonmouth.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/ThirstyUntidyCottonmouth.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/ThirstyUntidyCottonmouth.gif"
         }],
         "fires": [
 
