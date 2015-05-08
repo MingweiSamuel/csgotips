@@ -124,6 +124,17 @@
             "webm": "http:\/\/fat.gfycat.com\/FavoriteFixedFalcon.webm",
             "mp4": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.mp4",
             "gif": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.gif"
+        }, {
+            "from": "Car",
+            "to": "A Long",
+            "team": "CT",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [1709, 1816, 1974, 1748, 1572, 1647],
+            "webm": "http:\/\/fat.gfycat.com\/YellowLoneIrishterrier.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/YellowLoneIrishterrier.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/YellowLoneIrishterrier.gif"
         }]
     },
     "inferno": {
