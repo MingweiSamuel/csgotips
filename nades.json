@@ -91,9 +91,18 @@
         "fires": [
 
         ],
-        "flashes": [
-
-        ]
+        "flashes": [{
+            "from": "CT Mid",
+            "to": "Mid Doors",
+            "team": "CT",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [-716, 2064, -898, 2072, -579, 2161],
+            "webm": "http:\/\/fat.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.gif"
+        }]
     },
     "inferno": {
         "name": "Inferno",
