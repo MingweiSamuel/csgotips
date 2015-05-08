@@ -135,6 +135,28 @@
             "webm": "http:\/\/fat.gfycat.com\/YellowLoneIrishterrier.webm",
             "mp4": "http:\/\/giant.gfycat.com\/YellowLoneIrishterrier.mp4",
             "gif": "http:\/\/zippy.gfycat.com\/YellowLoneIrishterrier.gif"
+        }, {
+            "from": "Pit",
+            "to": "A Doors",
+            "team": "CT",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [1333, 578, 1274, 322, 1169, 759],
+            "webm": "http:\/\/fat.gfycat.com\/UnkemptInbornGodwit.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/UnkemptInbornGodwit.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/UnkemptInbornGodwit.gif"
+        }, {
+            "from": "CT A Ramp",
+            "to": "A Site",
+            "team": "CT",
+            "speed": "sprint",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [743, 2185, 1143, 2515],
+            "webm": "http:\/\/fat.gfycat.com\/YellowLoneIrishterrier.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/YellowLoneIrishterrier.mp4",
+            "gif": "http:\/\/zippy.gfycat.com\/YellowLoneIrishterrier.gif"
         }]
     },
     "inferno": {
