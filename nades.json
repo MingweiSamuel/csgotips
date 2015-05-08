@@ -98,10 +98,21 @@
             "speed": "still",
             "height": "standing",
             "throw_speed": "full throw",
-            "loc": [-716, 2064, -898, 2072, -579, 2161],
+            "loc": [-736, 2064, -908, 2072, -579, 2161],
             "webm": "http:\/\/fat.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.webm",
             "mp4": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.mp4",
             "gif": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.gif"
+        }, {
+            "from": "CT Spawn",
+            "to": "Mid Doors",
+            "team": "CT",
+            "speed": "walking",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [-60, 2000, 94, 2041, -330, 2141],
+            "webm": "http:\/\/fat.gfycat.com\/AcademicKlutzyBedbug.webm",
+            "mp4": "http:\/\/giant.gfycat.com\/AcademicKlutzyBedbug.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/AcademicKlutzyBedbug.gif"
         }]
     },
     "inferno": {
