@@ -125,7 +125,7 @@
             "mp4": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.mp4",
             "gif": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.gif"
         }, {
-            "from": "Car",
+            "from": "A Car",
             "to": "A Long",
             "team": "CT",
             "speed": "sprint",
@@ -190,6 +190,17 @@
             "webm": "http:\/\/zippy.gfycat.com\/LimitedSplendidHuemul.webm",
             "mp4": "http:\/\/fat.gfycat.com\/LimitedSplendidHuemul.mp4",
             "gif": "http:\/\/giant.gfycat.com\/LimitedSplendidHuemul.gif"
+        }, {
+            "from": "B Car",
+            "to": "B Doors",
+            "team": "Both",
+            "speed": "still",
+            "height": "standing",
+            "throw_speed": "full throw",
+            "loc": [-1712, 1616, -1327, 2298, -1268, 2188],
+            "webm": "http:\/\/fat.gfycat.com\/AstonishingFaroffGar.webm",
+            "mp4": "http:\/\/fat.gfycat.com\/AstonishingFaroffGar.mp4",
+            "gif": "http:\/\/giant.gfycat.com\/AstonishingFaroffGar.gif"
         }]
     },
     "inferno": {
