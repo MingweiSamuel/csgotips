@@ -182,6 +182,11 @@
     </div>
   </div>
   <script type="text/javascript">
+
+    window.onerror = function (message, file, line, column, errorObj) {
+      if (errorObj !== undefined) //so it won't blow up in the rest of the browsers
+        console.log('Error: ' + errorObj.stack);
+    }
   
     var s = Snap("#map");
     var maps = {};
@@ -438,14 +443,25 @@
           continue;
         var loc = nade.loc.map(locMapper);
         
-        var polyline = s.polyline(loc).attr({
-          strokeWidth: {
-            smokes: 32,
-            fires: 28,
-            flashes: 24
-          }[type],
-          fillOpacity: 0,
-        });
+        var group = s.group();
+
+        for (var j = 3; j < loc.length; j += 2) {
+          var thickness = {
+              smokes: 32,
+              fires: 28,
+              flashes: 24
+            }[type];
+          var line = s.line.apply(s, loc.slice(j - 3, j + 1)).attr({
+            strokeWidth: thickness,
+            fillOpacity: 0,
+          });
+          group.add(line);
+          if (j + 2 < loc.length) {
+            var joint = s.circle(loc[j - 1], loc[j], thickness / 2);
+            group.add(joint);
+          }
+        }
+
         var start = s.circle(loc[0], loc[1], {
           smokes: 60,
           fires: 50,
@@ -463,7 +479,7 @@
         });
         //s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
-        var group = s.group(start, polyline, end, fakeEnd);
+        group.add(start, end, fakeEnd);
         //group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
         
         var enter = function() {
