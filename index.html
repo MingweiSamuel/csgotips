@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CS:GO Tips</title>
+  <title>CS:GO.Tips</title>
   <meta name="description" content="CSGO Nades">
   <meta name="author" content="Mingwei Samuel">
   
@@ -316,18 +316,27 @@
         }, 0);
       }
 
+      function setTitle(mapid) {
+        document.title = 'CS:GO.Tips';
+        if (mapid)
+          document.title += ' - ' + mapid.charAt(0).toUpperCase() + mapid.substr(1).toLowerCase();
+      }
+
       crossroads.addRoute('', function() {
         hideAll();
+        setTitle();
         document.getElementById('introPage').classList.remove('hide');
       });
       crossroads.addRoute('{mapName}', function(mapName) {
         console.log('MAP: ' + mapName);
+        setTitle(mapName);
         document.getElementById('nadeSelect').value = '';
         if (!showMap(mapName))
           revert();
       });
       crossroads.addRoute('{mapName}/{nadeType}', function(mapName, nadeType) {
         console.log('MAP w/ NADES: ' + [mapName, nadeType]. join(', '));
+        setTitle(mapName);
         document.getElementById('nadeSelect').value = nadeType;
         if (!showMap(mapName, function() {
           if (nadeType === 'all') {
@@ -342,6 +351,7 @@
       });
       crossroads.addRoute('{mapName}/{nadeType}/{id}', function(mapName, nadeType, id) {
         console.log('VIDEO: ' + [mapName, nadeType, id].join(', '));
+        setTitle(mapName);
         if (!showVideo(mapName, nadeType, id))
           revert();
       });
