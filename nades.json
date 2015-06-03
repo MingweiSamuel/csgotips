@@ -2,6 +2,7 @@
     "cache": {
         "name": "Cache",
         "minimap": "http://i.imgur.com/yd7crc6.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/vNvNxCw.png",
         "pos_x": -2278,
         "pos_y": 3469,
@@ -62,6 +63,7 @@
     "cbble": {
         "name": "Cobblestone",
         "minimap": "http://i.imgur.com/fqX78CB.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/OXrlCEn.png",
         "pos_x": -3840,
         "pos_y": 3072,
@@ -80,6 +82,7 @@
     "dust2": {
         "name": "Dust II",
         "minimap": "http://i.imgur.com/wJ3TNB4.png",
+        "callouts": "callouts/dust2.svg",
         "thumb": "http://i.imgur.com/NxSch2J.png",
         "pos_x": -2430,
         "pos_y": 3383,
@@ -215,6 +218,7 @@
     "inferno": {
         "name": "Inferno",
         "minimap": "http://i.imgur.com/qhkUs44.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/44mgeBR.png",
         "pos_x": -2200,
         "pos_y": 4400,
@@ -233,6 +237,7 @@
     "mirage": {
         "name": "Mirage",
         "minimap": "http://i.imgur.com/qRfz1fE.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/K5g8t8Q.png",
         "pos_x": -3230,
         "pos_y": 1713,
@@ -377,6 +382,7 @@
     "nuke": {
         "name": "Nuke",
         "minimap": "http://i.imgur.com/LLvNuQq.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/oKdAiub.png",
         "pos_x": -3050,
         "pos_y": 2200,
@@ -395,6 +401,7 @@
     "overpass": {
         "name": "Overpass",
         "minimap": "http://i.imgur.com/V3oCYth.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/VGAetrI.png",
         "pos_x": -4831,
         "pos_y": 1781,
@@ -413,6 +420,7 @@
     "season": {
         "name": "Season",
         "minimap": "http://i.imgur.com/9xuYKbe.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/elYBiQK.png",
         "pos_x": -1003,
         "pos_y": 2521,
@@ -431,6 +439,7 @@
     "train": {
         "name": "Train",
         "minimap": "http://i.imgur.com/J2uAZL4.png",
+        "callouts": "",
         "thumb": "http://i.imgur.com/53JM9Ll.png",
         "pos_x": -2477,
         "pos_y": 2392,

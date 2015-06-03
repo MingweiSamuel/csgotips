@@ -409,6 +409,13 @@
       image.node.onload = function() {
         document.getElementById("map").classList.remove('hide');
       };
+      console.log("W/H", scale);
+      image.click(function(e, x, y) {
+        var box = image.node.getBoundingClientRect();
+        var dx = scale * (x - box.left) / (box.right - box.left);
+        var dy = scale * (y - box.top) / (box.bottom - box.top);
+        console.log(0|dx, 0|dy);
+      });
       
       return true;
     }
