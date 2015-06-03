@@ -27,7 +27,7 @@
       padding-top: 2em;
     }
     
-    p, h1, h2, h3, h4, h5, h6, span, select, button, li, table {
+    p, h1, h2, h3, h4, h5, h6, span, select, button, input, li, table {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       -ms-filter: invert(100%);
@@ -155,14 +155,15 @@
           </div>
           <div class="row">
             <select class="u-full-width" id="nadeSelect" onchange="changeGrenadeType(this.value);">
-              <option selected disabled hidden value=''>Grenade Type</option>
+              <option value=''>None</option>
+              <option value='all'>All</option>
               <option value='smokes'>Smoke</option>
               <option value='fires'>Molotov</option>
               <option value='flashes'>Flashbang</option>
             </select>
           </div>
           <div class="row">
-            <button id="toggleCallouts" class="u-full-width" onclick="toggleCallouts()">Show Callouts</button>
+            <input type="button" value="Show Callouts" id="toggleCallouts" class="u-full-width" onclick="toggleCallouts()" />
           </div>
           <div class="row">
             <h4>Throws:</h4>
@@ -242,7 +243,7 @@
           thumb.innerHTML = '<h4>' + map.name + '</h4>';
           thumb.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
           thumb.onclick = function() {
-            hasher.setHash(this);
+            hasher.setHash(this, 'all');
           }.bind(mapIds[i]);
           row.appendChild(thumb);
         }
@@ -337,7 +338,7 @@
       hasher.changed.add(hashChange); //add hash change listener
       hasher.initialized.add(hashChange); //add initialized listener (to grab initial value in case it is already set)
       hasher.init(); //initialize hasher (start listening for history changes)
-    }
+    } // END INIT
     
     function changeMap(mapName) {
       if (hasher.getHashAsArray()[1])
@@ -347,7 +348,10 @@
     }
 
     function changeGrenadeType(type) {
-      hasher.setHash(hasher.getHashAsArray()[0], type);
+      if (type)
+        hasher.setHash(hasher.getHashAsArray()[0], type);
+      else
+        hasher.setHash(hasher.getHashAsArray()[0]);
     }
     
     function updateVideo(nade) {
@@ -547,11 +551,11 @@
       var button = document.getElementById('toggleCallouts');
       if (showCallouts) {
         document.getElementById('callouts').style.display = '';
-        button.innerHTML = 'Hide Callouts';
+        button.value = 'Hide Callouts';
       }
       else {
         document.getElementById('callouts').style.display = 'none';
-        button.innerHTML = 'Show Callouts';
+        button.value = 'Show Callouts';
       }
       this.innerHTML = ''
     }
