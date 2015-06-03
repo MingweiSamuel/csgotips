@@ -1,3 +1,3 @@
-# CS:GO Nades
+# CS:GO Tips
 
-http://lugtech.github.io/csgonades/
+http://www.csgo.tips/
