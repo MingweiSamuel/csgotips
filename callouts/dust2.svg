@@ -39,6 +39,13 @@ text{
     <text x="3750" y="1360" font-size="350" transform="rotate(90 3750 1360)">LONG A</text>
     <text x="3740" y="1080" font-size="90" transform="rotate(90 3740 1080)">CROSS</text>
     <text x="4050" y="1080" font-size="260" transform="rotate(90 4050 1080)">CAR</text>
+    
+    <text x="3510" y="1030" font-size="260">A</text>
+    
+    <text x="750" y="820" font-size="260">B</text>
+    <text x="970" y="850" font-size="70">DEF</text>
+    <text x="920" y="560" font-size="70" transform="rotate(30 920 560)">SAFE</text>
+    
     <text x="4090" y="2390" font-size="150" transform="rotate(90 4090 2390)">PIT PLAT</text>
     <text x="3150" y="2260" font-size="100">BLUE</text>
   
