@@ -27,7 +27,7 @@
       padding-top: 2em;
     }
     
-    p, h1, h2, h3, h4, h5, h6, span, select, li, table {
+    p, h1, h2, h3, h4, h5, h6, span, select, button, li, table {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       -ms-filter: invert(100%);
@@ -75,7 +75,7 @@
   </style>
   
   <script type="text/javascript">
-    if (location.href.indexOf('index.html') >= 0)
+    if (location.href.indexOf('index.html') >= 0 && window.location.protocol !== "file:")
       location.replace(location.href.replace('index.html', '')); //remove 'index.html', no history entry
   </script>
   <script src="./snap.svg-min.js" type="text/javascript"></script>
@@ -162,6 +162,9 @@
             </select>
           </div>
           <div class="row">
+            <button id="toggleCallouts" class="u-full-width" onclick="toggleCallouts()">Show Callouts</button>
+          </div>
+          <div class="row">
             <h4>Throws:</h4>
             <ul id="nadeList">
               <!-- NADE LIST HERE -->
@@ -189,6 +192,7 @@
     }
   
     var s = Snap("#map");
+    var showCallouts = false;
     var maps = {};
     var delay = 500;
     
@@ -395,27 +399,38 @@
       //check if map exists
       if (!maps.hasOwnProperty(mapName)) {
         if (mapName)
-          alert("Invalid map: " + mapName);
+          alert('Invalid map: ' + mapName);
         return false;
       }
       var map = maps[mapName];
       
       s.clear(); //clear the svg
+
       var scale = map.scale * 1024;
-      document.getElementById("map").setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
+      document.getElementById('map').setAttribute('viewBox', [0, 0, scale, scale].join(' ')); //resize the viewport to scale
     
       
       var image = s.image(map.minimap, 0, 0, scale, scale);
       image.node.onload = function() {
         document.getElementById("map").classList.remove('hide');
       };
-      console.log("W/H", scale);
+      console.log('W/H', scale);
       image.click(function(e, x, y) {
         var box = image.node.getBoundingClientRect();
         var dx = scale * (x - box.left) / (box.right - box.left);
         var dy = scale * (y - box.top) / (box.bottom - box.top);
         console.log(0|dx, 0|dy);
       });
+      
+      s.group().attr({id: 'nadeGroup'}); //nadegroup after image
+      
+      if (map.callouts) {
+        Snap.load(map.callouts, function (f) {
+          s.append(f.select('g').attr({display: (showCallouts ? '' : 'none'), id: 'callouts'}));
+          var callouts = document.getElementById('callouts');
+          callouts.parentNode.insertBefore(callouts, document.getElementById('nadeGroup'));
+        });
+      }
       
       return true;
     }
@@ -443,21 +458,23 @@
       var locMapper = function(n, i) {
         return i % 2 == 0 ? n - map.pos_x : map.pos_y - n;
       };
-    
+
       for (var i = 0; i < map[type].length; i++) {
         var nade = map[type][i];
         if (nade.loc.length < 2)
           continue;
         var loc = nade.loc.map(locMapper);
-        
+
         var group = s.group();
+        document.getElementById('nadeGroup').appendChild(group.node);
+
+        var thickness = {
+          smokes: 32,
+          fires: 28,
+          flashes: 24
+        }[type];
 
         for (var j = 3; j < loc.length; j += 2) {
-          var thickness = {
-              smokes: 32,
-              fires: 28,
-              flashes: 24
-            }[type];
           var line = s.line.apply(s, loc.slice(j - 3, j + 1)).attr({
             strokeWidth: thickness,
             fillOpacity: 0,
@@ -521,8 +538,24 @@
         li.addEventListener("mouseleave", leave);
         document.getElementById('nadeList').appendChild(li);
       }
+      
       return true;
     }
+    
+    function toggleCallouts() {
+      showCallouts = !showCallouts;
+      var button = document.getElementById('toggleCallouts');
+      if (showCallouts) {
+        document.getElementById('callouts').style.display = '';
+        button.innerHTML = 'Hide Callouts';
+      }
+      else {
+        document.getElementById('callouts').style.display = 'none';
+        button.innerHTML = 'Show Callouts';
+      }
+      this.innerHTML = ''
+    }
+    
   </script>
 </body>
 </html>
