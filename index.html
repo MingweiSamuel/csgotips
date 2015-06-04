@@ -66,14 +66,14 @@
       transition: all 100ms ease 0s;
     }
     
-    #map {
+    #map, #callouts {
       -webkit-transition: opacity .5s ease 0s;
       -moz-transition: opacity .5s ease 0s;
       -ms-transition: opacity .5s ease 0s;
       -o-transition: opacity .5s ease 0s;
       transition: opacity .5s ease 0s;
     }
-    #map.hide {
+    #map.hide, #callouts.hide {
       opacity: 0;
     }
 
@@ -458,9 +458,12 @@
       
       if (map.callouts) {
         Snap.load(map.callouts, function (f) {
-          s.append(f.select('g').attr({display: (showCallouts ? '' : 'none'), id: 'callouts'}));
+          s.append(f.select('g').attr({class: 'hide', id: 'callouts'}));
+
           var callouts = document.getElementById('callouts');
           callouts.parentNode.insertBefore(callouts, document.getElementById('nadeGroup'));
+          if (showCallouts)
+            document.getElementById('callouts').classList.remove('hide'); //it will probably animate on top of the map's fade in, oh well
         });
       }
       
@@ -579,13 +582,13 @@
       var button = document.getElementById('toggleCallouts');
       if (!button)
         return;
-      
+
       if (showCallouts) {
-        document.getElementById('callouts').style.display = '';
+        document.getElementById('callouts').classList.remove('hide');
         button.value = 'Hide Callouts';
       }
       else {
-        document.getElementById('callouts').style.display = 'none';
+        document.getElementById('callouts').classList.add('hide');
         button.value = 'Show Callouts';
       }
       this.innerHTML = ''
