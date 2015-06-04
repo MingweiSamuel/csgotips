@@ -71,5 +71,12 @@ text{
     <text x="330" y="470" font-size="68">BOX</text>
 
     <text x="340" y="770" font-size="150">PLAT</text>
+
+    <text x="3325" y="1015" font-size="60">ELEV</text>
+    <text x="3320" y="1070" font-size="60">ATOR</text>
+    <text x="2990" y="1015" font-size="60">BOOST</text>
+    
+    <text x="3450" y="2850" font-size="140">PIT</text>
+    <text x="3400" y="2980" font-size="140">SIDE</text>
   </g>
 </svg>
