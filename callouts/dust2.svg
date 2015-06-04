@@ -57,5 +57,19 @@ text{
   
   
     <text x="3740" y="2960" font-size="190">PIT</text>
+
+    <text x="1860" y="3070" font-size="190">TOP MID</text>
+    <text x="2140" y="2860" font-size="80">PALM</text>
+    <text x="1960" y="3300" font-size="130" transform="rotate(90 1960 3300)">SUICIDE</text>
+    <text x="1260" y="4265" font-size="160">T (SPAWN)</text>
+    <text x="2200" y="4200" font-size="120">T RAMP</text>
+
+    <text y="-3120" x="2720" transform="rotate(90 0 0)" font-size="120">LONG</text>
+    <text y="-3010" x="2670" transform="rotate(90 0 0)" font-size="120">DOORS</text>
+
+    <text x="325" y="410" font-size="110">HS</text>
+    <text x="330" y="470" font-size="68">BOX</text>
+
+    <text x="340" y="770" font-size="150">PLAT</text>
   </g>
 </svg>
