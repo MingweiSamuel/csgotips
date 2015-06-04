@@ -324,8 +324,10 @@
 
       crossroads.addRoute('', function() {
         hideAll();
-        setTitle();
         document.getElementById('introPage').classList.remove('hide');
+
+        setTitle();
+        document.getElementById('map').classList.add('hide'); //hide map
       });
       crossroads.addRoute('{mapName}', function(mapName) {
         console.log('MAP: ' + mapName);
