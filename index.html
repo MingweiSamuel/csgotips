@@ -580,15 +580,16 @@
     function toggleCallouts() {
       showCallouts = !showCallouts;
       var button = document.getElementById('toggleCallouts');
-      if (!button)
+      var co = document.getElementById('callouts');
+      if (!co)
         return;
 
       if (showCallouts) {
-        document.getElementById('callouts').classList.remove('hide');
+        co.classList.remove('hide');
         button.value = 'Hide Callouts';
       }
       else {
-        document.getElementById('callouts').classList.add('hide');
+        co.classList.add('hide');
         button.value = 'Show Callouts';
       }
       this.innerHTML = ''
