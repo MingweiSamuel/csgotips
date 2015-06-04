@@ -227,9 +227,8 @@
             maps = JSON.parse(xmlhttp.responseText);
             init();
           }
-          else {
-             alert('Error ' + xmlhttp.status);
-          }
+          else
+            console.log('nade.json Error ' + xmlhttp.status);
         }
       };
   
@@ -319,7 +318,7 @@
       function setTitle(mapid) {
         document.title = 'CS:GO.Tips';
         if (mapid)
-          document.title += ' - ' + mapid.charAt(0).toUpperCase() + mapid.substr(1).toLowerCase();
+          document.title += ' - ' + maps[mapid].name;
       }
 
       crossroads.addRoute('', function() {
@@ -331,14 +330,14 @@
       });
       crossroads.addRoute('{mapName}', function(mapName) {
         console.log('MAP: ' + mapName);
-        setTitle(mapName);
         document.getElementById('nadeSelect').value = '';
         if (!showMap(mapName))
           revert();
+
+        setTitle(mapName); //after revert
       });
       crossroads.addRoute('{mapName}/{nadeType}', function(mapName, nadeType) {
         console.log('MAP w/ NADES: ' + [mapName, nadeType]. join(', '));
-        setTitle(mapName);
         document.getElementById('nadeSelect').value = nadeType;
         if (!showMap(mapName, function() {
           if (nadeType === 'all') {
@@ -350,6 +349,8 @@
             revert();
         }))
           revert();
+
+        setTitle(mapName); //after revert
       });
       crossroads.addRoute('{mapName}/{nadeType}/{id}', function(mapName, nadeType, id) {
         console.log('VIDEO: ' + [mapName, nadeType, id].join(', '));
