@@ -577,6 +577,9 @@
     function toggleCallouts() {
       showCallouts = !showCallouts;
       var button = document.getElementById('toggleCallouts');
+      if (!button)
+        return;
+      
       if (showCallouts) {
         document.getElementById('callouts').style.display = '';
         button.value = 'Hide Callouts';
