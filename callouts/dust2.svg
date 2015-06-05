@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
   <g>
     <style>
-text{
+text {
   font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   
@@ -10,7 +10,7 @@ text{
   stroke: #333;
   stroke-width: 20;*/
 
-  opacity: 0.8;
+  opacity: 0.7;
   cursor: default;
 
   -webkit-touch-callout: none;
@@ -20,7 +20,28 @@ text{
   -ms-user-select: none;
   user-select: none;
 }
+
+text.site {
+  fill: #622;
+  opacity: 0.5;
+}
+
+text.plant {
+  fill: #FD4;
+}
     </style>
+    <text class="site" x="3510" y="1030" font-size="260">A</text>
+    <text class="site" x="750" y="720" font-size="260">B</text>
+
+    <text class="plant" x="3535" y="920" font-size="60">DEF</text>
+    <text class="plant" x="3560" y="1035" font-size="60">LONG</text>
+    <text class="plant" x="3605" y="820" font-size="60">SAFE</text>
+    <text class="plant" y="-3410" x="840" font-size="60" transform="rotate(90 0 0)">CAT</text>
+
+    <text class="plant" x="970" y="850" font-size="70">DEF</text>
+    <text class="plant" x="920" y="560" font-size="70" transform="rotate(30 920 560)">SAFE</text>
+    <text class="plant" x="810" y="620" font-size="60" transform="rotate(20 810 620)">HID</text>
+
     <text x="2040" y="1980" font-size="80">XBOX</text>
     <text x="1955" y="2140" font-size="300" transform="rotate(90 1955 2140)">MID</text>
   
@@ -39,12 +60,9 @@ text{
     <text x="3750" y="1360" font-size="350" transform="rotate(90 3750 1360)">LONG A</text>
     <text x="3740" y="1080" font-size="90" transform="rotate(90 3740 1080)">CROSS</text>
     <text x="4050" y="1080" font-size="260" transform="rotate(90 4050 1080)">CAR</text>
-    
-    <text x="3510" y="1030" font-size="260">A</text>
-    
-    <text x="750" y="820" font-size="260">B</text>
-    <text x="970" y="850" font-size="70">DEF</text>
-    <text x="920" y="560" font-size="70" transform="rotate(30 920 560)">SAFE</text>
+
+    <text x="735" y="820" font-size="60">DOUB</text>
+    <text x="730" y="880" font-size="60">STACK</text>
     
     <text x="4090" y="2390" font-size="150" transform="rotate(90 4090 2390)">PIT PLAT</text>
     <text x="3150" y="2260" font-size="100">BLUE</text>
@@ -75,8 +93,30 @@ text{
     <text x="3325" y="1015" font-size="60">ELEV</text>
     <text x="3320" y="1070" font-size="60">ATOR</text>
     <text x="2990" y="1015" font-size="60">BOOST</text>
-    
+
     <text x="3450" y="2850" font-size="140">PIT</text>
     <text x="3400" y="2980" font-size="140">SIDE</text>
+
+    <g transform="translate(2600 3300)">
+      <text x="0" y="0" font-size="140">OUTSIDE</text>
+      <text x="110" y="140" font-size="140">LONG</text>
+    </g>
+
+    <text x="400" y="2240" font-size="180">UPPER B</text>
+    <text x="500" y="2340" font-size="100">(TUNNELS)</text>
+    <text x="1225" y="1960" font-size="140">LOWER B</text>
+    <text x="1325" y="2040" font-size="80">(TUNNELS)</text>
+    <text x="800" y="1730" font-size="140" transform="rotate(-45 800 1730)">CAR</text>
+
+    <text x="1010" y="720" font-size="60">WINDOW</text>
+    <g transform="translate(970 1150)">
+      <text x="130" y="0" font-size="100">B</text>
+      <text x="0" y="100" font-size="100">DOORS</text>
+    </g>
+
+    <g transform="translate(450 3100)">
+      <text x="20" y="0" font-size="140">OUTSIDE</text>
+      <text x="0" y="140" font-size="140">TUNNELS</text>
+    </g>
   </g>
 </svg>
