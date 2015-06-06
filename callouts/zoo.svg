@@ -1,0 +1,50 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <style>
+text {
+  font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  
+  fill: #EEE;
+  /*paint-order: stroke;
+  stroke: #333;
+  stroke-width: 20;*/
+
+  opacity: 0.7;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+text.site {
+  fill: #622;
+  opacity: 0.5;
+}
+
+text.plant {
+  fill: #FD4;
+}
+    </style>
+
+    <text class="site" x="4400" y="2500" font-size="260">A</text>
+    <text class="site" x="3700" y="5450" font-size="260">B</text>
+
+    <text x="2700" y="4700" font-size="180">SHORT B</text>
+    <text x="2700" y="5710" font-size="180">LONG B</text>
+
+    <path id="banana" d="M3680 3170
+      a 350 350 0 0 1 580 130" visibility="hidden" />
+    <text font-size="180">
+      <textPath xlink:href="#banana">
+        BANANA
+      </textPath>
+    </text>
+  </g>
+</svg>
