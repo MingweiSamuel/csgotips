@@ -1,0 +1,19 @@
+{
+    "name": "Season",
+    "minimap": "http://i.imgur.com/9xuYKbe.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/elYBiQK.png",
+    "pos_x": -1003,
+    "pos_y": 2521,
+    "rot": 0,
+    "scale": 5.0,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Log",
+    "minimap": "http://i.imgur.com/UQfb4RX.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/dEmSuNN.jpg",
+    "pos_x": -411,
+    "pos_y": 759,
+    "rot": 0,
+    "scale": 6.5,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

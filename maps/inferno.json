@@ -1,0 +1,19 @@
+{
+    "name": "Inferno",
+    "minimap": "http://i.imgur.com/qhkUs44.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/44mgeBR.png",
+    "pos_x": -2200,
+    "pos_y": 4400,
+    "rot": 0,
+    "scale": 5.9,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

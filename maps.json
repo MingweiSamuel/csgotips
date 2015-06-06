@@ -1,0 +1,16 @@
+{
+  "dust2": "maps/dust2.json",
+  "mirage": "maps/mirage.json",
+  "inferno": "maps/inferno.json",
+  "cache": "maps/cache.json",
+  "train": "maps/train.json",
+  "zoo": "maps/zoo.json",
+  "overpass": "maps/overpass.json",
+  "cbble": "maps/cbble.json",
+  "season": "maps/season.json",
+  "log": "maps/log.json",
+  "rails": "maps/rails.json",
+  "resort": "maps/resort.json",
+  "dust": "maps/dust.json",
+  "vertigo": "maps/vertigo.json"
+}

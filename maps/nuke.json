@@ -1,0 +1,19 @@
+{
+    "name": "Nuke",
+    "minimap": "http://i.imgur.com/LLvNuQq.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/oKdAiub.png",
+    "pos_x": -3050,
+    "pos_y": 2200,
+    "rot": 0,
+    "scale": 6.5,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

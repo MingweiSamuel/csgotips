@@ -1,0 +1,19 @@
+{
+    "name": "Cobblestone",
+    "minimap": "http://i.imgur.com/fqX78CB.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/OXrlCEn.png",
+    "pos_x": -3840,
+    "pos_y": 3072,
+    "rot": 0,
+    "scale": 6,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

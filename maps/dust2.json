@@ -1,0 +1,136 @@
+{
+    "name": "Dust II",
+    "minimap": "http://i.imgur.com/wJ3TNB4.png",
+    "callouts": "callouts/dust2.svg",
+    "thumb": "http://i.imgur.com/NxSch2J.png",
+    "pos_x": -2430,
+    "pos_y": 3383,
+    "rot": 1,
+    "scale": 4.4,
+    "smokes": [{
+        "from": "X-Box",
+        "to": "CT Spawn",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [-272, 1356, -589, 1695, -229, 2113],
+        "webm": "http:\/\/zippy.gfycat.com\/LegitimateTartGallinule.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/LegitimateTartGallinule.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/LegitimateTartGallinule.gif"
+    }],
+    "fires": [
+
+    ],
+    "flashes": [{
+        "from": "CT Mid",
+        "to": "Mid Doors",
+        "team": "CT",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [-736, 2064, -908, 2072, -579, 2161],
+        "webm": "http:\/\/fat.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ShockingShamelessIvorybilledwoodpecker.gif"
+    }, {
+        "from": "CT Spawn",
+        "to": "Mid Doors",
+        "team": "CT",
+        "speed": "walking",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [-60, 2000, 94, 2041, -330, 2141],
+        "webm": "http:\/\/fat.gfycat.com\/AcademicKlutzyBedbug.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AcademicKlutzyBedbug.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AcademicKlutzyBedbug.gif"
+    }, {
+        "from": "CT A Ramp",
+        "to": "A Cross",
+        "team": "CT",
+        "speed": "walking",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1005, 2032, 897, 2036, 1286, 2050],
+        "webm": "http:\/\/fat.gfycat.com\/FavoriteFixedFalcon.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/FavoriteFixedFalcon.gif"
+    }, {
+        "from": "A Car",
+        "to": "A Long",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1709, 1816, 1974, 1748, 1572, 1647],
+        "webm": "http:\/\/fat.gfycat.com\/YellowLoneIrishterrier.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/YellowLoneIrishterrier.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/YellowLoneIrishterrier.gif"
+    }, {
+        "from": "Pit",
+        "to": "A Doors",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1333, 578, 1274, 322, 1169, 759],
+        "webm": "http:\/\/fat.gfycat.com\/UnkemptInbornGodwit.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/UnkemptInbornGodwit.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/UnkemptInbornGodwit.gif"
+    }, {
+        "from": "CT A Ramp",
+        "to": "A Site",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [743, 2185, 1258, 2354],
+        "webm": "http:\/\/fat.gfycat.com\/SecretWindingIndianhare.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/SecretWindingIndianhare.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/SecretWindingIndianhare.gif"
+    }, {
+        "from": "Short A",
+        "to": "A",
+        "team": "T",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [378, 1628, 462, 2092],
+        "webm": "http:\/\/fat.gfycat.com\/NaturalHonoredArrowana.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/NaturalHonoredArrowana.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/NaturalHonoredArrowana.gif"
+    }, {
+        "from": "Long Doors",
+        "to": "Long A Corner",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [752, 574, 514, 642, 766, 785],
+        "webm": "http:\/\/fat.gfycat.com\/VeneratedInnocentGalapagoshawk.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/VeneratedInnocentGalapagoshawk.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/VeneratedInnocentGalapagoshawk.gif"
+    }, {
+        "from": "Mid X-Box",
+        "to": "Mid Doors",
+        "team": "T",
+        "speed": "still",
+        "height": "crouching",
+        "throw_speed": "full throw",
+        "loc": [-272, 1356, -449, 1649],
+        "webm": "http:\/\/zippy.gfycat.com\/LimitedSplendidHuemul.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/LimitedSplendidHuemul.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/LimitedSplendidHuemul.gif"
+    }, {
+        "from": "B Car",
+        "to": "B Doors",
+        "team": "Both",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [-1712, 1616, -1327, 2298, -1268, 2188],
+        "webm": "http:\/\/fat.gfycat.com\/AstonishingFaroffGar.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/AstonishingFaroffGar.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AstonishingFaroffGar.gif"
+    }]
+}

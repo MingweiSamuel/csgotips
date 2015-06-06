@@ -1,0 +1,19 @@
+{
+    "name": "Vertigo",
+    "minimap": "http://i.imgur.com/bmuUUJk.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/aWWwtxh.jpg",
+    "pos_x": -3168,
+    "pos_y": 1762,
+    "rot": 0,
+    "scale": 4,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Zoo",
+    "minimap": "http://i.imgur.com/G0mx85Z.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/faj55sM.jpg",
+    "pos_x": -2435,
+    "pos_y": 6116,
+    "rot": 0,
+    "scale": 7,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

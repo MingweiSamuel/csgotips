@@ -1,0 +1,19 @@
+{
+    "name": "Overpass",
+    "minimap": "http://i.imgur.com/V3oCYth.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/VGAetrI.png",
+    "pos_x": -4831,
+    "pos_y": 1781,
+    "rot": 0,
+    "scale": 5.2,
+    "smokes": [
+
+    ],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}

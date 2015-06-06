@@ -1,0 +1,61 @@
+{
+    "name": "Cache",
+    "minimap": "http://i.imgur.com/yd7crc6.png",
+    "callouts": "",
+    "thumb": "http://i.imgur.com/vNvNxCw.png",
+    "pos_x": -2278,
+    "pos_y": 3469,
+    "rot": 0,
+    "scale": 5.5,
+    "smokes": [{
+        "from": "Van",
+        "to": "CT Mid",
+        "team": "T",
+        "speed": "still",
+        "height": "jump",
+        "throw_speed": "full throw",
+        "loc": [1730, 976, -330, 16],
+        "webm": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ExaltedNimbleCuttlefish.gif"
+    }, {
+        "from": "Garage",
+        "to": "Left Mid",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1760, 318, 300, 158],
+        "webm": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.gif"
+    }, {
+        "from": "Garage",
+        "to": "Right Mid",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1760, 202, 300, 373],
+        "webm": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.gif"
+    }, {
+        "from": "B Halls",
+        "to": "B Main",
+        "team": "T",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1100, -718, 660, -1175, 212, -636],
+        "webm": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.gif"
+    }],
+    "fires": [
+
+    ],
+    "flashes": [
+
+    ]
+}   

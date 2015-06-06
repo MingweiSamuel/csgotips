@@ -206,34 +206,64 @@
       if (errorObj !== undefined) //so it won't blow up in the rest of the browsers
         console.log('Error: ' + errorObj.stack);
     }
+
+    function getJson(url, callback) {
+      (function(url, callback) {
+        var xmlhttp;
+        if (window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp = new XMLHttpRequest();
+        else { // code for IE6, IE5
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          alert('Please stop using Internet Explorer 5/6 you fakkin joke');
+        }
+    
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+            if (typeof callback !== 'function')
+              return;
+
+            if(xmlhttp.status == 200){
+              console.log('received ' + url);
+              var data = JSON.parse(xmlhttp.responseText);
+              callback(data);
+            }
+            else {
+              console.log('FAILED TO GET FILE: ' + url);
+              callback(null);
+            }
+          }
+        };
+
+        xmlhttp.overrideMimeType("application/json");
+        xmlhttp.open('GET', url, true);
+        xmlhttp.send();
+
+      })(url, callback);
+    }
   
     var s = Snap("#map");
     var showCallouts = false;
-    var maps = {};
+    var maps = null;
     var delay = 500;
-    
+    var homeScroll = 0;
+
     (function() {
-      var xmlhttp;
-      if (window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-      else { // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        alert('Please stop using Internet Explorer 5/6 you fakkin joke');
-      }
-  
-      xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
-          if(xmlhttp.status == 200){
-            maps = JSON.parse(xmlhttp.responseText);
-            init();
-          }
-          else
-            console.log('nade.json Error ' + xmlhttp.status);
+      getJson('maps.json', function(data) {
+        maps = data;
+
+        var mapids = Object.keys(maps);
+        var remaining = mapids.length;
+        for (var i = 0; i < mapids.length; i++) {
+          getJson(maps[mapids[i]], function(data) {
+            maps[this] = data;
+
+            remaining--;
+            if (remaining <= 0)
+              init();
+          }.bind(mapids[i]));
         }
-      };
-  
-      xmlhttp.open("GET", "./nades.json", true);
-      xmlhttp.send();
+
+      });
     })();
     
     function init() {
@@ -257,6 +287,7 @@
           thumb.innerHTML = '<h4>' + map.name + '</h4>';
           thumb.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
           thumb.onclick = function() {
+            homeScroll = window.pageYOffset || document.documentElement.scrollTop;
             hasher.setHash(this, 'all');
           }.bind(mapIds[i]);
           row.appendChild(thumb);
@@ -327,6 +358,8 @@
 
         setTitle();
         document.getElementById('map').classList.add('hide'); //hide map
+
+        window.scrollTo(0, homeScroll);
       });
       crossroads.addRoute('{mapName}', function(mapName) {
         console.log('MAP: ' + mapName);
