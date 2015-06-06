@@ -61,8 +61,15 @@ text.plant {
     <text x="3740" y="1080" font-size="90" transform="rotate(90 3740 1080)">CROSS</text>
     <text x="4050" y="1080" font-size="260" transform="rotate(90 4050 1080)">CAR</text>
 
-    <text x="735" y="820" font-size="60">DOUB</text>
-    <text x="730" y="880" font-size="60">STACK</text>
+    <g transform="translate(730 820)">
+      <text x="5" y="0" font-size="60">DOUB</text>
+      <text x="0" y="60" font-size="60">STACK</text>
+    </g>
+
+    <g transform="translate(590 975)">
+      <text x="8" y="0" font-size="60">BIG</text>
+      <text x="0" y="60" font-size="60">BOX</text>
+    </g>
     
     <text x="4090" y="2390" font-size="150" transform="rotate(90 4090 2390)">PIT PLAT</text>
     <text x="3150" y="2260" font-size="100">BLUE</text>
@@ -109,7 +116,7 @@ text.plant {
     <text x="800" y="1730" font-size="140" transform="rotate(-45 800 1730)">CAR</text>
 
     <text x="1010" y="720" font-size="60">WINDOW</text>
-    <g transform="translate(970 1150)">
+    <g transform="translate(970 1100)">
       <text x="130" y="0" font-size="100">B</text>
       <text x="0" y="100" font-size="100">DOORS</text>
     </g>
@@ -118,5 +125,18 @@ text.plant {
       <text x="20" y="0" font-size="140">OUTSIDE</text>
       <text x="0" y="140" font-size="140">TUNNELS</text>
     </g>
+
+    <g transform="translate(1240 1270)">
+      <text x="10" y="0" font-size="70">DOOR</text>
+      <text x="0" y="65" font-size="70">BOXES</text>
+    </g>
+
+    <path id="scaffold" d="M1370 630
+      a 110 110 0 0 0 220 150" visibility="hidden" />
+    <text font-size="60">
+      <textPath xlink:href="#scaffold">
+        SCAFFOLD
+      </textPath>
+    </text>
   </g>
 </svg>
