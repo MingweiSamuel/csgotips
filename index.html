@@ -182,7 +182,7 @@
             </select>
           </div>
           <div class="row">
-            <input type="button" value="Show Callouts" id="toggleCallouts" class="u-full-width" onclick="toggleCallouts()" />
+            <input type="button" value="Hide Callouts" id="toggleCallouts" class="u-full-width" onclick="toggleCallouts()" />
           </div>
           <div class="row">
             <h4>Throws:</h4>
@@ -246,7 +246,7 @@
     }
   
     var s = Snap("#map");
-    var showCallouts = false;
+    var showCallouts = true;
     var maps = null;
     var delay = 500;
     var homeScroll = 0;
@@ -495,12 +495,12 @@
       
       if (map.callouts) {
         Snap.load(map.callouts, function (f) {
-          s.append(f.select('g').attr({class: 'hide', id: 'callouts'}));
+          s.append(f.select('g').attr({id: 'callouts'}));
 
           var callouts = document.getElementById('callouts');
           callouts.parentNode.insertBefore(callouts, document.getElementById('nadeGroup'));
-          if (showCallouts)
-            document.getElementById('callouts').classList.remove('hide'); //it will probably animate on top of the map's fade in, oh well
+          if (!showCallouts)
+            document.getElementById('callouts').classList.add('hide'); //it will probably animate on top of the map's fade in, oh well
         });
       }
       
