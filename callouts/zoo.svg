@@ -45,19 +45,19 @@ text.plant {
     </text>
 
     <path id="upper_path" d="M2700 3362
-      c 300 0 100 260 1000 260" visibility="hidden" />
+      c 320 0 100 260 1000 260" visibility="hidden" />
     <text font-size="180">
       <textPath xlink:href="#upper_path">
-        UPPER PATH
+        CATWALK
       </textPath>
     </text>
 
-    <text x="3000" y="3300" font-size="80" transform="rotate(20 3000 3300)">PATH STAIRS</text>
+    <text x="3000" y="3300" font-size="80" transform="rotate(20 3000 3300)">CAT STAIRS</text>
     <path id="lower_path" d="M2500 3100
       c 500 0 900 280 1000 300" visibility="hidden" />
     <text font-size="180">
       <textPath xlink:href="#lower_path">
-        LOWER PATH
+        PATHWAY
       </textPath>
     </text>
 
