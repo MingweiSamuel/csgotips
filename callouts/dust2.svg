@@ -131,6 +131,8 @@ text.plant {
       <text x="0" y="65" font-size="70">BOXES</text>
     </g>
 
+    <text y="-230" x="1075" transform="rotate(90 0 0)" font-size="70">FENCE</text>
+
     <path id="scaffold" d="M1370 630
       a 110 110 0 0 0 220 150" visibility="hidden" />
     <text font-size="60">
