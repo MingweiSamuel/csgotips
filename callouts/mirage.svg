@@ -1,0 +1,98 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <style>
+text {
+  font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  
+  fill: #EEE;
+  /*paint-order: stroke;
+  stroke: #333;
+  stroke-width: 20;*/
+
+  opacity: 0.7;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+text.site {
+  fill: #551515;
+  opacity: 0.5;
+}
+
+.plant {
+  opacity: 0.7;
+  fill: #FD4;
+}
+    </style>
+
+    <text class="site" x="2650" y="4030" font-size="260">A</text>
+    <text class="site" x="1030" y="1620" font-size="260">B</text>
+
+    <text class="plant" x="1125" y="1350" font-size="80">DEF</text>
+    <text class="plant" x="1025" y="1620" font-size="80">COR</text>
+
+    <circle class="plant" cx="2585" cy="3715" r="20" />
+
+    <text y="-2190" x="1350" transform="rotate(90 0 0)" font-size="100" style="fill: #000">UNDERPASS</text>
+
+    <text x="815" y="1030" transform="rotate(10 820 1050)" font-size="100">VAN</text>
+    <text x="1320" y="1020" font-size="140">APARTMENTS</text>
+    <text x="3200" y="940" font-size="130">HOUSE</text>
+    <text x="2570" y="1230" font-size="150">ALLEY</text>
+    <text y="-590" x="1180" transform="rotate(90 0 0)" font-size="140">BENCH</text>
+    <text y="-870" x="1980" transform="rotate(90 0 0)" font-size="100">DOOR</text>
+    <text x="1050" y="2070" font-size="100">WINDOW</text>
+    <text x="865" y="2390" font-size="112">MARKET/KITCH.</text>
+
+    <text x="1850" y="1600" font-size="170">CAT</text>
+    <text x="2400" y="2210" font-size="170">CATWALK</text>
+    <text x="2600" y="2450" font-size="190">MIDDLE</text>
+    <text y="-3500" x="1600" transform="rotate(90 0 0)" font-size="160">TOP MID</text>
+    <text y="-3590" x="2300" transform="rotate(90 0 0)" font-size="100">CART</text>
+    <text y="-4380" x="1540" transform="rotate(90 0 0)" font-size="250">T SPAWN</text>
+
+    <g transform="translate(1800 1900)">
+      <text x="0" y="0" font-size="90">LADDER</text>
+      <text x="50" y="90" font-size="90">ROOM</text>
+    </g>
+    <text y="-2040" x="2160" transform="rotate(90 0 0)" font-size="110">WINDOW</text>
+    <text y="-2160" x="2240" transform="rotate(90 0 0)" font-size="90">BOOST</text>
+    <text x="2000" y="3200" font-size="120">JUNGLE</text>
+    <text y="-2530" x="2500" transform="rotate(90 0 0)" font-size="110">CONNECTOR</text>
+    <text y="-2690" x="3010" transform="rotate(90 0 0)" font-size="90">STAIRS</text>
+    <g transform="translate(2800 3300)">
+      <text x="0" y="0" font-size="90">SAND</text>
+      <text x="5" y="90" font-size="90">WICH</text>
+    </g>
+    <text x="3080" y="3200" font-size="90">TETRIS</text>
+    <g transform="translate(3440 3250)">
+      <text x="0" y="0" font-size="130">A MAIN/</text>
+      <text x="15" y="130" font-size="130">T RAMP</text>
+    </g>
+    <text y="-3230" x="3460" transform="rotate(90 0 0)" font-size="100">BALCONY</text>
+    <text x="3530" y="3950" font-size="190">PALACE</text>
+
+    <text x="1160" y="3660" font-size="130">CT SPAWN</text>
+    <text x="2040" y="4160" font-size="210">CT</text>
+    <text x="2150" y="4330" font-size="110">BOOTH</text>
+
+    <g transform="translate(2800 3800)">
+      <text x="0" y="0" font-size="90">TRIPLE</text>
+      <text x="20" y="90" font-size="90">STACK</text>
+    </g>
+    <text x="2865" y="4115" font-size="90">FIRE B.</text>
+    <g transform="translate(2380 3810)">
+      <text x="0" y="0" font-size="90">DANGER</text>
+      <text x="50" y="90" font-size="90">BOX</text>
+    </g>
+  </g>
+</svg>
