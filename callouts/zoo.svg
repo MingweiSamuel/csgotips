@@ -36,6 +36,9 @@ text.plant {
     <text class="site" x="4400" y="2500" font-size="260">A</text>
     <text class="site" x="3700" y="5450" font-size="260">B</text>
 
+    <text x="380" y="3710" font-size="340">T</text>
+    <text x="6200" y="4080" font-size="340">CT</text>
+
     <path id="banana" d="M3680 3170
       a 350 350 0 0 1 580 130" visibility="hidden" />
     <text font-size="180">
@@ -65,6 +68,7 @@ text.plant {
     <text y="-4620" x="2300" transform="rotate(90 0 0)" font-size="110">CT NEST</text>
 
     <text x="4380" y="2650" font-size="100">JEEP</text>
+    <text x="4740" y="2600" font-size="160">HUT</text>
 
     <text x="3200" y="3870" font-size="120">Z CONNECTOR</text>
 
