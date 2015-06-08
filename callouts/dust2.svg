@@ -75,6 +75,7 @@ text.plant {
     
     <text x="4090" y="2390" font-size="150" transform="rotate(90 4090 2390)">PIT PLAT</text>
     <text x="3150" y="2260" font-size="100">BLUE</text>
+    <text x="3500" y="2230" font-size="70" transform="rotate(-25 3500 2230)">CORNER</text>
   
     <text x="3830" y="600" font-size="160" transform="rotate(90 3830 600)">RAMP</text>
     <text x="3100" y="1260" font-size="140">CT RAMP</text>

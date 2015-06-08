@@ -18,6 +18,61 @@
         "webm": "http:\/\/zippy.gfycat.com\/LegitimateTartGallinule.webm",
         "mp4": "http:\/\/fat.gfycat.com\/LegitimateTartGallinule.mp4",
         "gif": "http:\/\/giant.gfycat.com\/LegitimateTartGallinule.gif"
+    }, {
+        "from": "Outside Long",
+        "to": "Long Corner",
+        "team": "T",
+        "speed": "still",
+        "height": "jump",
+        "throw_speed": "full throw",
+        "loc": [120, -462, 1360, 1200],
+        "webm": "http:\/\/giant.gfycat.com\/ClassicJadedCardinal.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ClassicJadedCardinal.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ClassicJadedCardinal.gif"
+    }, {
+        "from": "Outside Long",
+        "to": "X-Box",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [316, 234, -279, 1409],
+        "webm": "http:\/\/fat.gfycat.com\/PaleElementaryDeer.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/PaleElementaryDeer.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/PaleElementaryDeer.gif"
+    },{
+        "from": "Top Mid",
+        "to": "X-Box",
+        "team": "T",
+        "speed": "sprint",
+        "height": "still",
+        "throw_speed": "full throw",
+        "loc": [96, 290, -617, 1034, -279, 1409],
+        "webm": "http:\/\/fat.gfycat.com\/RingedKeenCopperbutterfly.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/RingedKeenCopperbutterfly.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/RingedKeenCopperbutterfly.gif"
+    }, {
+        "from": "Long Doors",
+        "to": "X-Box",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [752, 574, -279, 1409],
+        "webm": "http:\/\/fat.gfycat.com\/FreeBetterGibbon.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/FreeBetterGibbon.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/FreeBetterGibbon.gif"
+    }, {
+        "from": "Blue",
+        "to": "Long Corner",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [644, 1200, 1360, 1200],
+        "webm": "http:\/\/fat.gfycat.com\/SinfulIdioticKusimanse.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/SinfulIdioticKusimanse.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/SinfulIdioticKusimanse.gif"
     }],
     "fires": [
 
