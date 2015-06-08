@@ -73,10 +73,30 @@
         "webm": "http:\/\/fat.gfycat.com\/SinfulIdioticKusimanse.webm",
         "mp4": "http:\/\/giant.gfycat.com\/SinfulIdioticKusimanse.mp4",
         "gif": "http:\/\/giant.gfycat.com\/SinfulIdioticKusimanse.gif"
+    }, {
+        "from": "CT Spawn",
+        "to": "CT Mid Cross",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [273, 2378, -125, 2055, -428, 2263],
+        "webm": "http:\/\/zippy.gfycat.com\/WatchfulAshamedBee.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/WatchfulAshamedBee.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/WatchfulAshamedBee.gif"
     }],
-    "fires": [
-
-    ],
+    "fires": [{
+        "from": "Elevator",
+        "to": "A Site",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [991, 2373, 1062, 2000, 1161, 2495],
+        "webm": "http:\/\/fat.gfycat.com\/LinedImprobableCrustacean.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LinedImprobableCrustacean.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/LinedImprobableCrustacean.gif"
+    }],
     "flashes": [{
         "from": "CT Mid",
         "to": "Mid Doors",
