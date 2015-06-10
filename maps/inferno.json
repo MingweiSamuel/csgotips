@@ -1,7 +1,7 @@
 {
     "name": "Inferno",
     "minimap": "http://i.imgur.com/qhkUs44.png",
-    "callouts": "",
+    "callouts": "callouts/inferno.svg",
     "thumb": "http://i.imgur.com/44mgeBR.png",
     "pos_x": -2200,
     "pos_y": 4400,

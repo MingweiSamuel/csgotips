@@ -1,0 +1,96 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <style>
+text {
+  font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  
+  fill: #EEE;
+  /*paint-order: stroke;
+  stroke: #333;
+  stroke-width: 20;*/
+
+  opacity: 0.7;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+text.site {
+  fill: #200;
+  opacity: 0.5;
+}
+
+text.plant {
+  fill: #FD4;
+}
+    </style>
+
+    <text class="site" x="4100" y="4030" font-size="300">A</text>
+    <text class="site" x="2600" y="1740" font-size="300">B</text>
+
+    <text x="450" y="3970" font-size="340">T</text>
+    <text y="-4550" x="2050" font-size="280" transform="rotate(90 0 0)">CT</text>
+
+
+    <text x="2560" y="930" font-size="110">GARDEN</text>
+    <text x="3120" y="1650" font-size="140">CT</text>
+    <text x="3450" y="1440" font-size="110">TRUCK</text>
+    <g transform="translate(2930 1150)">
+      <text x="40" font-size="110">CONST-</text>
+      <text y="110" font-size="110">RUCTION</text>
+    </g>
+    <text y="-2685" x="1070" transform="rotate(90 0 0)" font-size="100">SPOOLS</text>
+    <text y="-2785" x="1350" transform="rotate(90 0 0)" font-size="100">GRILL</text>
+    <text y="-2180" x="1180" transform="rotate(90 0 0)" font-size="100">DARK</text>
+    <text y="-2180" x="1640" transform="rotate(90 0 0)" font-size="95">NEW B.</text>
+    <text y="-2620" x="1780" transform="rotate(90 0 0)" font-size="100">1st</text>
+    <text y="-2480" x="1755" transform="rotate(90 0 0)" font-size="90">2nd</text>
+
+    <text x="3960" y="2080" font-size="100">TERRACE</text>
+    <text x="4030" y="1780" font-size="100">WELL</text>
+    <text y="-3735" x="1700" transform="rotate(90 0 0)" font-size="200">SPEEDWAY</text>
+
+    <text x="4440" y="2940" font-size="110">KITCHEN</text>
+    <text x="4600" y="3270" font-size="110">LIBRARY</text>
+    <text y="-3970" x="2700" transform="rotate(90 0 0)" font-size="200">ARCH</text>
+    <text x="3650" y="3340" font-size="180">ARCH SIDE</text>
+    <text x="3365" y="3230" font-size="90">CUBBY</text>
+
+    <text x="2340" y="2970" transform="rotate(-63.5 2335 2980)" font-size="160">BANANA</text>
+    <text x="2080" y="3045" font-size="100">LOGS</text>
+    <text x="2510" y="2340" font-size="120">CAR</text>
+    <text x="2750" y="2490" font-size="100">SAND B.</text>
+
+    <text x="1730" y="3600" font-size="140">T RAMP</text>
+    <text x="2730" y="3895" font-size="190">MIDDLE</text>
+    <text x="3180" y="4100" font-size="100">BOILER</text>
+    <text x="1920" y="4600" font-size="180">ALT MIDDLE</text>
+    <text y="-1755" x="4280" transform="rotate(90 0 0)" font-size="130" style="fill: #fff">BRIDGE</text>
+    <text y="-2430" x="3710" transform="rotate(90 0 0)" font-size="130">UNDERPASS</text>
+    <text y="-2350" x="3830" transform="rotate(90 0 0)" font-size="90">(MEXICAN)</text>
+
+    <text x="3700" y="4370" font-size="140">TRUCK SIDE</text>
+    <text x="4100" y="4495" font-size="110">TRUCK</text>
+    <text y="-4265" x="4520" transform="rotate(90 0 0)" font-size="100" style="fill: #fff">BALCONY</text>
+    <text x="4400" y="4770" font-size="200">PIT</text>
+    <text y="-4680" x="3780" transform="rotate(90 0 0)" font-size="120">GRAVEYARD</text>
+    <text y="-3380" x="4130" transform="rotate(90 0 0)" font-size="130">APARTMENTS</text>
+    <text x="3140" y="5060" font-size="110">STAIRS</text>
+    <text x="3520" y="4770" font-size="120">LONG HALL</text>
+    <text x="1870" y="4990" font-size="140">T APARTMENTS</text>
+
+    <text y="-3290" x="4250" transform="rotate(90 0 0)" font-size="100">WINDOW</text>
+    <text y="-3190" x="4330" transform="rotate(90 0 0)" font-size="100">ROOM</text>
+
+    <text y="-3290" x="4720" transform="rotate(90 0 0)" font-size="90">DARK</text>
+    <text y="-3200" x="4710" transform="rotate(90 0 0)" font-size="90">ROOM</text>
+  </g>
+</svg>
