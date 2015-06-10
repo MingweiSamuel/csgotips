@@ -87,10 +87,10 @@ text.plant {
     <text x="3520" y="4770" font-size="120">LONG HALL</text>
     <text x="1870" y="4990" font-size="140">T APARTMENTS</text>
 
-    <text y="-3290" x="4250" transform="rotate(90 0 0)" font-size="100">WINDOW</text>
+    <text y="-3270" x="4250" transform="rotate(90 0 0)" font-size="100">WINDOW</text>
     <text y="-3190" x="4330" transform="rotate(90 0 0)" font-size="100">ROOM</text>
 
-    <text y="-3290" x="4720" transform="rotate(90 0 0)" font-size="90">DARK</text>
-    <text y="-3200" x="4710" transform="rotate(90 0 0)" font-size="90">ROOM</text>
+    <text y="-3270" x="4720" transform="rotate(90 0 0)" font-size="90">DARK</text>
+    <text y="-3190" x="4710" transform="rotate(90 0 0)" font-size="90">ROOM</text>
   </g>
 </svg>
