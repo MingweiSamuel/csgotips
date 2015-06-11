@@ -1,0 +1,73 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <style>
+text {
+  font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  
+  fill: #EEE;
+  /*paint-order: stroke;
+  stroke: #333;
+  stroke-width: 20;*/
+
+  opacity: 0.7;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+text.site {
+  fill: #200;
+  opacity: 0.5;
+}
+
+text.plant {
+  fill: #FD4;
+}
+
+.dark {
+  fill: #111;
+}
+    </style>
+
+    <text class="site" x="2040" y="4840" font-size="300">B</text>
+    <text class="site" x="1900" y="1700" font-size="300">A</text>
+
+    <text x="5190" y="3600" font-size="340">T</text>
+    <text x="600" y="3050" font-size="300">CT</text>
+
+    <text x="1430" y="3460" font-size="120">Z CONNECT<tspan class="dark">OR</tspan></text>
+    <text x="2920" y="2990" font-size="155">BOOST</text>
+    <text x="2100" y="3340" font-size="240" class="dark">MIDDLE</text>
+    <text x="2440" y="3590" font-size="130">ROOF</text>
+    <text x="2600" y="3750" font-size="100">VENTS</text>
+    <text x="2630" y="4560" font-size="200">B HALLS</text>
+    <text x="2100" y="3540" font-size="90" class="dark">SAND</text>
+    <text x="2100" y="3630" font-size="90" class="dark">BAGS</text>
+
+    <text x="3830" y="4320" font-size="165">OUTSIDE B</text>
+    <text x="2330" y="4160" font-size="100">B MAIN</text>
+    <text x="2000" y="3860" font-size="120">CHECKERS</text>
+    <text x="1660" y="4230" font-size="110">HEAVEN</text>
+    <text y="1940" x="-5000" transform="rotate(-90 0 0)" font-size="90">GENERATOR (HS)</text>
+    <text x="1640" y="4437" font-size="140">CT</text>
+    <text x="2820" y="4900" font-size="200">TOXIC</text>
+
+    <text x="3150" y="3430" font-size="200">GARAGE</text>
+
+    <text x="1840" y="1320" font-size="100">QUAD B.</text>
+    <text x="2370" y="2050" font-size="100">FORKLIFT</text>
+    <text y="-2840" x="1700" transform="rotate(90 0 0)" font-size="220">A MAIN</text>
+    <text x="2430" y="1370" font-size="120">SQUEAKY</text>
+    <text y="-2100" x="2470" transform="rotate(90 0 0)" font-size="140">HIGHWAY</text>
+    <text y="-1980" x="2510" transform="rotate(90 0 0)" font-size="120">(A RAMP)</text>
+    <text y="-1280" x="2370" transform="rotate(90 0 0)" font-size="120">TRUCK</text>
+  </g>
+</svg>

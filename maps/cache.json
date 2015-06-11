@@ -1,7 +1,7 @@
 {
     "name": "Cache",
     "minimap": "http://i.imgur.com/yd7crc6.png",
-    "callouts": "",
+    "callouts": "callouts/cache.svg",
     "thumb": "http://i.imgur.com/vNvNxCw.png",
     "pos_x": -2278,
     "pos_y": 3469,
