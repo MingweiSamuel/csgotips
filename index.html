@@ -128,32 +128,30 @@
         </div>
         <div class="three columns">
           <table class="u-full-width">
-            <tbody>
-              <tr>
-                <td>From:</td>
-                <td id="iFrom"></td>
-              </tr>
-              <tr>
-                <td>To:</td>
-                <td id="iTo"></td>
-              </tr>
-              <tr>
-                <td>Team:</td>
-                <td id="iTeam"></td>
-              </tr>
-              <tr>
-                <td>Walk Speed:</td>
-                <td id="iSpeed"></td>
-              </tr>
-              <tr>
-                <td>Height:</td>
-                <td id="iHeight"></td>
-              </tr>
-              <tr>
-                <td>Throw Speed:</td>
-                <td id="iThrow"></td>
-              </tr>
-            </tbody>
+            <tr>
+              <td>From:</td>
+              <td id="iFrom"></td>
+            </tr>
+            <tr>
+              <td>To:</td>
+              <td id="iTo"></td>
+            </tr>
+            <tr>
+              <td>Team:</td>
+              <td id="iTeam"></td>
+            </tr>
+            <tr>
+              <td>Walk Speed:</td>
+              <td id="iSpeed"></td>
+            </tr>
+            <tr>
+              <td>Height:</td>
+              <td id="iHeight"></td>
+            </tr>
+            <tr>
+              <td>Throw Speed:</td>
+              <td id="iThrow"></td>
+            </tr>
           </table>
         </div>
       </div>
@@ -187,9 +185,11 @@
           </div>
           <div class="row">
             <h4>Throws:</h4>
-            <ul id="nadeList">
-              <!-- NADE LIST HERE -->
-            </ul>
+            <!--<ul id="nadeList">
+              <!- NADE LIST HERE ->
+            </ul>-->
+            <table id="nadeTable" class="u-full-width">
+            </table>
           </div>
         </div>
       </div>
@@ -464,7 +464,8 @@
     function updateMap(mapName) {
       //reset some things
       document.getElementById('mapSelect').value = mapName;
-      document.getElementById('nadeList').innerHTML = '';
+      //document.getElementById('nadeList').innerHTML = '';
+      document.getElementById('nadeTable').innerHTML = '';
       
       //check if map exists
       if (!maps.hasOwnProperty(mapName)) {
@@ -578,38 +579,54 @@
         
         group.add(start, end, fakeEnd);
         //group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
-        
-        var enter = function() {
-          this.parent().append(this);
-          this.attr({
-            fill: light,
-            stroke: light,
-            opacity: 1.0
-          });
-        }.bind(group);
-        var leave = function() {
-          this.attr({
+
+        (function() {
+          var tr = document.createElement('tr');
+          tr.style.opacity = 0.5;
+          tr.classList.add('nadeRow');
+          
+          var enter = function() {
+            this.parent().append(this);
+            this.attr({
+              fill: light,
+              stroke: light,
+              opacity: 1.0
+            });
+            tr.style.opacity = 1;
+          }.bind(group);
+          var leave = function() {
+            this.attr({
+              fill: dark,
+              stroke: dark,
+              opacity: 0.7
+            });
+            tr.style.opacity = 0.5;
+          }.bind(group);
+          var click = function() {
+            hasher.setHash(this.mapName, this.type, this.i);
+          }.bind({mapName: mapName, type: type, i: i});
+          
+          group.addClass("arrow").attr({
             fill: dark,
             stroke: dark,
-            opacity: 0.7
-          });
-        }.bind(group);
-        
-        group.addClass("arrow").attr({
-          fill: dark,
-          stroke: dark,
-          opacity: 0.5,
-          filter: shadow
-        }).hover(enter, leave).click(function() {
-          hasher.setHash(this.mapName, this.type, this.i);
-        }.bind({mapName: mapName, type: type, i: i}));
-        
-        //add list item
-        var li = document.createElement('li')
-        li.innerHTML = nade.from + ' to ' + nade.to + ' (' + nade.team + ')';
-        li.addEventListener("mouseenter", enter);
-        li.addEventListener("mouseleave", leave);
-        document.getElementById('nadeList').appendChild(li);
+            opacity: 0.5,
+            filter: shadow
+          }).hover(enter, leave).click(click);
+          
+          //add list item
+          /*var li = document.createElement('li');
+          li.innerHTML = nade.from + ' to ' + nade.to + ' (' + nade.team + ')';
+          li.addEventListener("mouseenter", enter);
+          li.addEventListener("mouseleave", leave);
+          document.getElementById('nadeList').appendChild(li);//*/
+
+          
+          tr.innerHTML = '<td style="width: 16px;"><svg viewBox="-128 -128 256 256"><use xlink:href="icons.svg#' + type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
+          tr.addEventListener('mouseenter', enter);
+          tr.addEventListener('mouseleave', leave);
+          tr.addEventListener('click', click);
+          document.getElementById('nadeTable').appendChild(tr);
+        })();
       }
       
       return true;
