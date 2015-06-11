@@ -130,14 +130,16 @@
     </div>
   </div>
   <div id="introPage" class="hide section page">
-    <div id="thumbs" class="container">
+    <div class="container">
       <div class="row">
         <div class="six columns offset-by-three">
           <input type="text" id="mapFilter" class="u-full-width" placeholder="filter" oninput="filterMaps(this.value);">
           <!--<p>Select A Map</p>-->
         </div>
       </div>
-      <!-- THUMB CONTAINS > THUMBS -->
+      <div id="thumbs">
+        <!-- THUMB CONTAINS > THUMBS -->
+      </div>
     </div>
   </div>
   <div id="mapPage" class="hide section page">
@@ -283,8 +285,7 @@
 
     function listMaps(mapIds) { //update map lists
       var thumbs = document.getElementById('thumbs');
-      while (thumbs.childNodes.length > 2)
-        thumbs.removeChild(thumbs.childNodes[2]);
+      thumbs.innerHTML = '';
 
       var row;
       for (var i = 0; i < mapIds.length; i++) {
