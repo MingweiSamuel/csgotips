@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   <title>CS:GO.Tips</title>
-  <meta name="description" content="CSGO Nades">
+  <meta name="description" content="CSGO Tips">
   <meta name="author" content="Mingwei Samuel">
   
   <!-- Mobile Specific -->
@@ -38,6 +38,11 @@
   <link href='http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
   <link href='./skeleton.custom.min.css' rel='stylesheet' type='text/css'>
   <style type="text/css">
+
+    html {
+      overflow-y: scroll;
+    }
+
     body {
       font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #000;
@@ -97,6 +102,7 @@
 
     .thumb > h4 {
       margin-bottom: 0;
+      text-shadow: 0px 0px 3px #FFF;
     }
   </style>
   
@@ -113,51 +119,25 @@
 <body>
   <div class="top section">
     <!-- FORK ME RIBBON -->
-    <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25%; max-width: 149px" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <a href="https://github.com/lugtech/csgotips"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25%; min-width: 70px; max-width: 149px" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     <!-- END FORK ME RIBBON -->
     <div class="container">
       <div class="row">
         <div class="twelve columns">
-          <h1 style="cursor: pointer;" onclick="hasher.setHash('');">CS:GO.Tips</h1>
+          <h1 style="cursor: pointer;" onclick="hasher.setHash(''); document.getElementById('mapFilter').value = ''; filterMaps('');">CS:GO.Tips</h1>
         </div>
       </div>
     </div>
   </div>
-  <div id="popPage" class="hide section page" onclick="history.back();">
-    <div class="container">
+  <div id="introPage" class="hide section page">
+    <div id="thumbs" class="container">
       <div class="row">
-        <div id="gfyParent" class="nine columns">
-          <!-- VIDEO HERE -->
-        </div>
-        <div class="three columns">
-          <table class="u-full-width">
-            <tr>
-              <td>From:</td>
-              <td id="iFrom"></td>
-            </tr>
-            <tr>
-              <td>To:</td>
-              <td id="iTo"></td>
-            </tr>
-            <tr>
-              <td>Team:</td>
-              <td id="iTeam"></td>
-            </tr>
-            <tr>
-              <td>Walk Speed:</td>
-              <td id="iSpeed"></td>
-            </tr>
-            <tr>
-              <td>Height:</td>
-              <td id="iHeight"></td>
-            </tr>
-            <tr>
-              <td>Throw Speed:</td>
-              <td id="iThrow"></td>
-            </tr>
-          </table>
+        <div class="six columns offset-by-three">
+          <input type="text" id="mapFilter" class="u-full-width" placeholder="filter" oninput="filterMaps(this.value);">
+          <!--<p>Select A Map</p>-->
         </div>
       </div>
+      <!-- THUMB CONTAINS > THUMBS -->
     </div>
   </div>
   <div id="mapPage" class="hide section page">
@@ -198,14 +178,41 @@
       </div>
     </div>
   </div>
-  <div id="introPage" class="hide section page">
+  <div id="popPage" class="hide section page" onclick="history.back();">
     <div class="container">
-      <div id="thumbs" class="row">
-        <div class="twelve columns">
-          <p>Select A Map</p>
+      <div class="row">
+        <div id="gfyParent" class="nine columns">
+          <!-- VIDEO HERE -->
+        </div>
+        <div class="three columns">
+          <table class="u-full-width">
+            <tr>
+              <td>From:</td>
+              <td id="iFrom"></td>
+            </tr>
+            <tr>
+              <td>To:</td>
+              <td id="iTo"></td>
+            </tr>
+            <tr>
+              <td>Team:</td>
+              <td id="iTeam"></td>
+            </tr>
+            <tr>
+              <td>Walk Speed:</td>
+              <td id="iSpeed"></td>
+            </tr>
+            <tr>
+              <td>Height:</td>
+              <td id="iHeight"></td>
+            </tr>
+            <tr>
+              <td>Throw Speed:</td>
+              <td id="iThrow"></td>
+            </tr>
+          </table>
         </div>
       </div>
-      <!-- THUMB CONTAINS > THUMBS -->
     </div>
   </div>
   <script type="text/javascript">
@@ -273,34 +280,60 @@
 
       });
     })();
+
+    function listMaps(mapIds) { //update map lists
+      var thumbs = document.getElementById('thumbs');
+      while (thumbs.childNodes.length > 2)
+        thumbs.removeChild(thumbs.childNodes[2]);
+
+      var row;
+      for (var i = 0; i < mapIds.length; i++) {
+        if (i % 2 === 0) {
+          row = document.createElement('div');
+          row.classList.add('row');
+          thumbs.appendChild(row);
+        }
+        var map = maps[mapIds[i]];
+        var thumb = document.createElement('div');
+        thumb.className = 'thumb six columns';
+        thumb.innerHTML = '<h4>' + map.name + '</h4>';
+        thumb.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
+        thumb.onclick = function() {
+          homeScroll = window.pageYOffset || document.documentElement.scrollTop;
+          hasher.setHash(this, 'all');
+        }.bind(mapIds[i]);
+        row.appendChild(thumb);
+      }
+    }
+
+    function filterMaps(q) {
+      if (!maps)
+        return;
+      q = q.toLowerCase();
+      var filtered = Object.keys(maps).filter(function(val) {
+        if (val.toLowerCase().indexOf(q) >= 0)
+          return true;
+        if (maps[val].name.toLowerCase().indexOf(q) >= 0)
+          return true;
+        return false;
+      });
+      listMaps(filtered);
+    }
     
     function init() {
-      (function() { //update map lists
+      //init
+      (function() {
         var mapIds = Object.keys(maps);
-        var row;
+        listMaps(mapIds);
+
         for (var i = 0; i < mapIds.length; i++) {
           var map = maps[mapIds[i]];
           var opt = document.createElement('option')
           opt.setAttribute('value', mapIds[i]);
           opt.innerHTML = map.name;
           document.getElementById('mapSelect').appendChild(opt);
-
-          if (i % 2 === 0) {
-            row = document.createElement('div');
-            row.classList.add('row');
-            document.getElementById('thumbs').appendChild(row);
-          }
-          var thumb = document.createElement('div');
-          thumb.className = 'thumb six columns';
-          thumb.innerHTML = '<h4>' + map.name + '</h4>';
-          thumb.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
-          thumb.onclick = function() {
-            homeScroll = window.pageYOffset || document.documentElement.scrollTop;
-            hasher.setHash(this, 'all');
-          }.bind(mapIds[i]);
-          row.appendChild(thumb);
         }
-      })();
+        })();
 
       function hideAll() {
         var pages = document.getElementsByClassName('page');
@@ -424,10 +457,6 @@
     }
     
     function updateVideo(nade) {
-      /*<source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.webm" type="video/webm">
-      <source src="http://zippy.gfycat.com/WindingInfantileIndianglassfish.mp4" type="video/mp4">
-      <a href="http://giant.gfycat.com/WindingInfantileIndianglassfish.gif">GIF LINK</a>*/
-      /*<video id="gfy" autoplay loop muted="muted" width="100%"></video>*/
       document.getElementById('gfyParent').innerHTML = '' //clear old video
 
       var vid = document.createElement('video');
@@ -578,10 +607,8 @@
           fill: 'transparent',
           stroke: 'transparent'
         });
-        //s.circle(loc[loc.length - 2], loc[loc.length - 1], 110);
         
         group.add(start, end, fakeEnd);
-        //group.transform('rotate(' + [90 * map.rot, scale / 2, scale / 2].join(' ') + ')');
 
         (function() {
           var tr = document.createElement('tr');
@@ -616,14 +643,7 @@
             filter: shadow
           }).hover(enter, leave).click(click);
           
-          //add list item
-          /*var li = document.createElement('li');
-          li.innerHTML = nade.from + ' to ' + nade.to + ' (' + nade.team + ')';
-          li.addEventListener("mouseenter", enter);
-          li.addEventListener("mouseleave", leave);
-          document.getElementById('nadeList').appendChild(li);//*/
-
-          
+          //add table item
           tr.innerHTML = '<td style="width: 16px;"><svg viewBox="-128 -128 256 256"><use xlink:href="icons.svg#' + type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
           tr.addEventListener('mouseenter', enter);
           tr.addEventListener('mouseleave', leave);
