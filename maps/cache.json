@@ -25,10 +25,10 @@
         "speed": "still",
         "height": "standing",
         "throw_speed": "full throw",
-        "loc": [1760, 318, 300, 158],
-        "webm": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.webm",
-        "mp4": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.mp4",
-        "gif": "http:\/\/giant.gfycat.com\/DefenselessDeafeningHorseshoebat.gif"
+        "loc": [1712, 464, 328, 152],
+        "webm": "http:\/\/fat.gfycat.com\/GrizzledWelltodoHammerkop.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/GrizzledWelltodoHammerkop.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/GrizzledWelltodoHammerkop.gif"
     }, {
         "from": "Garage",
         "to": "Right Mid",
@@ -36,10 +36,10 @@
         "speed": "still",
         "height": "standing",
         "throw_speed": "full throw",
-        "loc": [1760, 202, 300, 373],
-        "webm": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.webm",
-        "mp4": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.mp4",
-        "gif": "http:\/\/giant.gfycat.com\/PolishedHollowHorsemouse.gif"
+        "loc": [1712, -72, 390, 393],
+        "webm": "http:\/\/fat.gfycat.com\/LankyLastEquine.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LankyLastEquine.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/LankyLastEquine.gif"
     }, {
         "from": "B Halls",
         "to": "B Main",
@@ -51,6 +51,17 @@
         "webm": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.webm",
         "mp4": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.mp4",
         "gif": "http:\/\/giant.gfycat.com\/AliveCircularCuckoo.gif"
+    }, {
+        "from": "T",
+        "to": "Mid Roof",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1919, -175, 363, -21],
+        "webm": "http:\/\/fat.gfycat.com\/LateSlipperyBlackbear.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LateSlipperyBlackbear.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/LateSlipperyBlackbear.gif"
     }],
     "fires": [
 
