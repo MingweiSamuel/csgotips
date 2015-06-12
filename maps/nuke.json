@@ -50,6 +50,50 @@
         "webm": "http:\/\/zippy.gfycat.com\/QuarterlyPortlyJaeger.webm",
         "mp4": "http:\/\/fat.gfycat.com\/QuarterlyPortlyJaeger.mp4",
         "gif": "http:\/\/zippy.gfycat.com\/QuarterlyPortlyJaeger.gif"
+    }, {
+        "from": "Lower Ramp",
+        "to": "B Site",
+        "team": "T",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [768, 96, 895, -250, 774, -501],
+        "webm": "http:\/\/zippy.gfycat.com\/LiquidBreakableGoldfinch.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LiquidBreakableGoldfinch.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/LiquidBreakableGoldfinch.gif"
+    }, {
+        "from": "Lower Ramp",
+        "to": "B Site",
+        "team": "T",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [768, 96, 895, -250, 774, -501],
+        "webm": "http:\/\/zippy.gfycat.com\/LiquidBreakableGoldfinch.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LiquidBreakableGoldfinch.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/LiquidBreakableGoldfinch.gif"
+    }, {
+        "from": "Lobby",
+        "to": "A Main",
+        "team": "T",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-464, -907, 658, -1462],
+        "webm": "http:\/\/fat.gfycat.com\/SardonicHappygoluckyBantamrooster.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/SardonicHappygoluckyBantamrooster.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/SardonicHappygoluckyBantamrooster.gif"
+    }, {
+        "from": "T Roof",
+        "to": "Heaven",
+        "team": "T",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-83, -1017, 969, -517],
+        "webm": "http:\/\/fat.gfycat.com\/UnacceptableSlushyKinglet.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/UnacceptableSlushyKinglet.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/UnacceptableSlushyKinglet.gif"
     }],
     "fires": [
 
