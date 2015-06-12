@@ -6,9 +6,51 @@
     "pos_x": -3050,
     "pos_y": 2200,
     "scale": 6.5,
-    "smokes": [
-
-    ],
+    "smokes": [{
+        "from": "CT",
+        "to": "T Outside",
+        "team": "CT",
+        "speed": "still",
+        "height": "jump",
+        "throw_speed": "full throw",
+        "loc": [1660, -280, -467, -1534],
+        "webm": "http:\/\/giant.gfycat.com\/AcceptableSecondaryKissingbug.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AcceptableSecondaryKissingbug.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/AcceptableSecondaryKissingbug.gif"
+    }, {
+        "from": "CT",
+        "to": "T Outside",
+        "team": "CT",
+        "speed": "still",
+        "height": "jump",
+        "throw_speed": "full throw",
+        "loc": [1660, -280, 154, -1374],
+        "webm": "http:\/\/fat.gfycat.com\/BoilingWellwornDowitcher.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/BoilingWellwornDowitcher.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/BoilingWellwornDowitcher.gif"
+    }, {
+        "from": "Ramp",
+        "to": "Radio",
+        "team": "CT",
+        "speed": "sprint",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [688, 53, 78, 135, 160, -236],
+        "webm": "http:\/\/fat.gfycat.com\/BogusThinLangur.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/BogusThinLangur.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/BogusThinLangur.gif"
+    }, {
+        "from": "Radio",
+        "to": "Ramp",
+        "team": "T",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [243, -315, 63, -138, 406, 195],
+        "webm": "http:\/\/zippy.gfycat.com\/QuarterlyPortlyJaeger.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/QuarterlyPortlyJaeger.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/QuarterlyPortlyJaeger.gif"
+    }],
     "fires": [
 
     ],
