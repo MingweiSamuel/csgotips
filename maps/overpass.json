@@ -6,12 +6,96 @@
     "pos_x": -4831,
     "pos_y": 1781,
     "scale": 5.2,
-    "smokes": [
-
-    ],
-    "fires": [
-
-    ],
+    "smokes": [{
+        "from": "A Site",
+        "to": "B Short",
+        "team": "CT",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-2239, 1054, -1116, -655, -960, -434],
+        "webm": "http:\/\/fat.gfycat.com\/DescriptiveSecondKiskadee.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/DescriptiveSecondKiskadee.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/DescriptiveSecondKiskadee.gif"
+    }, {
+        "from": "A Site",
+        "to": "Pipe",
+        "team": "CT",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-2239, 1054, -1166, -967],
+        "webm": "http:\/\/fat.gfycat.com\/WindingAngryIndianhare.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/WindingAngryIndianhare.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/WindingAngryIndianhare.gif"
+    }, {
+        "from": "Squaky/Construction",
+        "to": "Sniper",
+        "team": "T",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-1732, -702, -1735, 519],
+        "webm": "http:\/\/zippy.gfycat.com\/ConsiderateWelltodoCaribou.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/ConsiderateWelltodoCaribou.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ConsiderateWelltodoCaribou.gif"
+    }, {
+        "from": "Squaky/Construction",
+        "to": "Barrels",
+        "team": "T",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-1732, -702, -833, 438],
+        "webm": "http:\/\/zippy.gfycat.com\/EnviousInsistentGypsymoth.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/EnviousInsistentGypsymoth.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/EnviousInsistentGypsymoth.gif"
+    }, {
+        "from": "Sniper",
+        "to": "Pipe",
+        "team": "CT",
+        "speed": "crouch",
+        "height": "crouch",
+        "throw_speed": "full throw",
+        "loc": [-1654, 583, -1166, -967],
+        "webm": "http:\/\/fat.gfycat.com\/FluffyTemptingBrahmanbull.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/FluffyTemptingBrahmanbull.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/FluffyTemptingBrahmanbull.gif"
+    }],
+    "fires": [{
+        "from": "Squaky/Construction",
+        "to": "B Site",
+        "team": "both",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-1732, -702, -1077, 20],
+        "webm": "http:\/\/fat.gfycat.com\/InfamousCraftyFoxhound.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/InfamousCraftyFoxhound.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/InfamousCraftyFoxhound.gif"
+    }, {
+        "from": "Squaky",
+        "to": "Barrles",
+        "team": "T",
+        "speed": "walk",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-1760, -870, -866, 370],
+        "webm": "http:\/\/fat.gfycat.com\/GranularHastyEel.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/GranularHastyEel.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/GranularHastyEel.gif"
+    }, {
+        "from": "Squaky/Construction",
+        "to": "Sniper",
+        "team": "T",
+        "speed": "still",
+        "height": "stand",
+        "throw_speed": "full throw",
+        "loc": [-1732, -702, -1719, 431],
+        "webm": "http:\/\/zippy.gfycat.com\/ImperfectLateDogfish.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/ImperfectLateDogfish.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ImperfectLateDogfish.gif"
+    }],
     "flashes": [
 
     ]
