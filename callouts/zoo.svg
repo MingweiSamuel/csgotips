@@ -67,6 +67,7 @@ text.plant {
     <text y="-2710" x="3620" transform="rotate(90 0 0)" font-size="120">T NEST</text>
     <text y="-4620" x="2300" transform="rotate(90 0 0)" font-size="110">CT NEST</text>
 
+    <text x="3220" y="1910" font-size="140">LONG A</text>
     <text x="4380" y="2650" font-size="100">JEEP</text>
     <text x="4740" y="2600" font-size="160">HUT</text>
 
@@ -74,5 +75,6 @@ text.plant {
 
     <text x="2700" y="4690" font-size="160">SHORT B</text>
     <text x="2700" y="5710" font-size="180">LONG B</text>
+    <text y="-2520" x="4900" transform="rotate(90 0 0)" font-size="140">B LOBBY</text>
   </g>
 </svg>
