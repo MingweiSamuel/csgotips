@@ -6,9 +6,95 @@
     "pos_x": -2435,
     "pos_y": 6116,
     "scale": 7,
-    "smokes": [
-
-    ],
+    "smokes": [{
+        "from": "Path",
+        "to": "Mid/Banana",
+        "team": "T",
+        "speed": "sprinting",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [490, 3079, 920, 2627,  1209, 2956],
+        "webm": "http:\/\/giant.gfycat.com\/LightSphericalItalianbrownbear.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LightSphericalItalianbrownbear.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/LightSphericalItalianbrownbear.gif"
+    }, {
+        "from": "T Nest",
+        "to": "CT Nest",
+        "team": "T",
+        "speed": "sprinting",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [160, 2305, 2137, 3610],
+        "webm": "http:\/\/fat.gfycat.com\/PastSpiritedAtlasmoth.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/PastSpiritedAtlasmoth.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/PastSpiritedAtlasmoth.gif"
+    }, {
+        "from": "A",
+        "to": "T Nest",
+        "team": "CT",
+        "speed": "sprinting",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [2097, 3915, 345, 2376],
+        "webm": "http:\/\/fat.gfycat.com\/CavernousGrandHochstettersfrog.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/CavernousGrandHochstettersfrog.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/CavernousGrandHochstettersfrog.gif"
+    }, {
+        "from": "Catwalk",
+        "to": "Window",
+        "team": "T",
+        "speed": "sprinting",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [457, 2742, 2314, 3198],
+        "webm": "http:\/\/fat.gfycat.com\/AdventurousHorribleCarp.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AdventurousHorribleCarp.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AdventurousHorribleCarp.gif"
+    }, {
+        "from": "A Long",
+        "to": "CT Nest",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [1024, 4336, 2193, 3684],
+        "webm": "http:\/\/fat.gfycat.com\/SlipperyVigilantIntermediateegret.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/SlipperyVigilantIntermediateegret.mp4",
+        "gif": "http:\/\/zippy.gfycat.com\/SlipperyVigilantIntermediateegret.gif"
+    }, {
+        "from": "B Lobby",
+        "to": "CT Lower",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [16, 400, 1434, 1518],
+        "webm": "http:\/\/fat.gfycat.com\/ImaginaryImpartialDwarfmongoose.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ImaginaryImpartialDwarfmongoose.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ImaginaryImpartialDwarfmongoose.gif"
+    }, {
+        "from": "B Lobby",
+        "to": "CT Long",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [135, 1088, 1709, 689],
+        "webm": "http:\/\/fat.gfycat.com\/SimplisticEmbellishedAmericanpainthorse.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/SimplisticEmbellishedAmericanpainthorse.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/SimplisticEmbellishedAmericanpainthorse.gif"
+    }, {
+        "from": "B Lobby",
+        "to": "CT Upper",
+        "team": "T",
+        "speed": "still",
+        "height": "standing",
+        "throw_speed": "full throw",
+        "loc": [16, 1260, 1465, 1538],
+        "webm": "http:\/\/zippy.gfycat.com\/FreeLinearHound.webm",
+        "mp4": "http:\/\/fat.gfycat.com\/FreeLinearHound.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/FreeLinearHound.gif"
+    }],
     "fires": [
 
     ],
