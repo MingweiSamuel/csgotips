@@ -1,0 +1,53 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <style>
+text {
+  font-family: "Exo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  
+  fill: #EEE;
+  /*paint-order: stroke;
+  stroke: #333;
+  stroke-width: 20;*/
+
+  opacity: 0.7;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+text.site {
+  fill: #622;
+  opacity: 0.5;
+}
+
+text.plant {
+  fill: #FD4;
+}
+    </style>
+
+    <text class="site" x="2750" y="1260" font-size="260">A</text>
+    <text class="site" x="3650" y="1787" font-size="260">B</text>
+
+    <text x="3350" y="5100" font-size="340">T</text>
+    
+    <text x="3710" y="2810" font-size="170">PIPE</text>
+    <text y="-4280" x="2000" font-size="120" transform="rotate(90 0 0)">MONSTER</text>
+    <text x="4180" y="2780" font-size="190" transform="rotate(50 4180 2780)">TRACKS</text>
+    <text y="3590" x="-2880" font-size="155" transform="rotate(-90 0 0)">-UCTION</text>
+    <text y="3435" x="-2870" font-size="155" transform="rotate(-90 0 0)">CONSTR</text>
+    <text y="3160" x="-2900" font-size="110" transform="rotate(-90 0 0)">SQUEAKY</text>
+
+    <text y="1850" x="-3460" font-size="200" transform="rotate(-90 0 0)">PARTY</text>
+    <text x="1810" y="4340" font-size="160">PLAYGROUND</text>
+    <text x="1880" y="3890" font-size="200">FOUNTAIN</text>
+    <text y="1280" x="-3400" font-size="280" transform="rotate(-90 0 0)">LONG A</text>
+  </g>
+</svg>

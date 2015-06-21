@@ -1,7 +1,7 @@
 {
     "name": "Overpass",
     "minimap": "http://i.imgur.com/V3oCYth.png",
-    "callouts": "",
+    "callouts": "callouts/overpass.svg",
     "thumb": "http://i.imgur.com/VGAetrI.png",
     "pos_x": -4831,
     "pos_y": 1781,
