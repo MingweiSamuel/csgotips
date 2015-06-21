@@ -37,6 +37,7 @@ text.plant {
     <text class="site" x="3650" y="1787" font-size="260">B</text>
 
     <text x="3350" y="5100" font-size="340">T</text>
+    <text x="2530" y="1010" font-size="90">(CT)</text>
     
     <text x="3710" y="2810" font-size="170">PIPE</text>
     <text y="-4280" x="2000" font-size="120" transform="rotate(90 0 0)">MONSTER</text>
@@ -44,10 +45,29 @@ text.plant {
     <text y="3590" x="-2880" font-size="155" transform="rotate(-90 0 0)">-UCTION</text>
     <text y="3435" x="-2870" font-size="155" transform="rotate(-90 0 0)">CONSTR</text>
     <text y="3160" x="-2900" font-size="110" transform="rotate(-90 0 0)">SQUEAKY</text>
+    <text y="3100" x="-3650" font-size="140" transform="rotate(-90 0 0)">TUNNELS</text>
 
     <text y="1850" x="-3460" font-size="200" transform="rotate(-90 0 0)">PARTY</text>
     <text x="1810" y="4340" font-size="160">PLAYGROUND</text>
     <text x="1880" y="3890" font-size="200">FOUNTAIN</text>
-    <text y="1280" x="-3400" font-size="280" transform="rotate(-90 0 0)">LONG A</text>
+    <text y="1280" x="-3480" font-size="320" transform="rotate(-90 0 0)">LONG A</text>
+    <text x="1600" y="1820" font-size="200" transform="rotate(-62.23 1600 1820)">LONG A</text>
+    <text y="2680" x="-2850" font-size="250" transform="rotate(-90 0 0)">SHORT A</text>
+    <text x="2050" y="1470" font-size="140">A MAIN</text>
+    <text y="2320" x="-2720" font-size="140" transform="rotate(-90 0 0)">RESTROOMS</text>
+    <text x="2140" y="400" font-size="160" transform="rotate(27.77 2140 400)">BANK</text>
+    <text x="2610" y="680" font-size="100" transform="rotate(27.77 2610 680)">A STAIRS</text>
+    <text x="2300" y="3120" font-size="120">CONNECTOR</text>
+
+    <text x="3040" y="1480" font-size="120" transform="rotate(-45 3040 1480)">SNIPER</text>
+    <text x="3760" y="1370" font-size="110">BARRELS</text>
+    <text x="3840" y="1460" font-size="90">(TOXIC)</text>
+    <text x="3240" y="1620" font-size="200">PIT</text>
+    <text x="3410" y="2060" font-size="110">BRIDGE</text>
+    <text x="3900" y="2360" font-size="90">SAND</text>
+    <text x="3900" y="2450" font-size="90">BAGS</text>
+    <text x="3700" y="2200" font-size="120">B MAIN</text>
+    <text x="3860" y="1690" font-size="90">PILLAR</text>
+    <text x="3850" y="1780" font-size="90">(DILDO)</text>
   </g>
 </svg>
